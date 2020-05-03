@@ -8,6 +8,35 @@
                 height: 30px;
                 margin-right: 5px;
             }
+            #navbar {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #f5f2f2;
+            }
+            .nav-opts {
+                float: left;
+            }
+            .nav-opts:hover {
+                background-color: #9a9a9a;
+            }
+            #nav-opts-home {
+                background-color: #e3e3e3;
+            }
+            #nav-opts-home:hover {
+                background-color: #9a9a9a;
+            }
+            .nav-a {
+                color: #000000;
+                display: block;
+                padding: 0px 14px;
+                text-align: center;
+                text-decoration: none;
+            }
+            .nav-text {
+                font-family: 'Roboto', sans-serif;
+            }
             .text-header {
                 font-family: 'Roboto', sans-serif;
             }
@@ -16,8 +45,12 @@
     <body>
         <div>
             <nav>
-                <ul>
-                    Samar Dikshit
+                <ul id="navbar">
+                    <li class="nav-opts" id="nav-opts-home"><a class="nav-a" href="index.html"><p class="nav-text">Samar Dikshit</p></a></li>
+                    <li class="nav-opts"><a class="nav-a"><p class="nav-text">Projects</p></a></li>
+                    <li class="nav-opts"><a class="nav-a"><p class="nav-text">Experience and Academics</p></a></li>
+                    <li class="nav-opts"><a class="nav-a"><p class="nav-text">CV</p></a></li>
+                    <li class="nav-opts"><a class="nav-a"><p class="nav-text">Photography</p></a></li>
                     <a href="https://github.com/samar14641" target="_blank"><img src="resources/github.png" class="header-img"></a>
                     <a href="https://www.linkedin.com/in/samar-dikshit/" target="_blank"><img src="resources/linkedin.png" class="header-img"></a></a>
                     <a href="mailto:samard05@gmail.com?cc=dikshit.s@northeastern.edu"><img src="resources/gmail.png" class="header-img"></a>
