@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <title>Samar Dikshit</title>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
         <style>
+            body {
+                margin: 0;
+            }
             .header-img {
                 height: 30px;
                 margin-right: 5px;
@@ -15,11 +20,18 @@
                 overflow: hidden;
                 background-color: #f5f2f2;
             }
+            #nav-icons {
+                float: right;
+                margin-top: 8px;
+            }
             .nav-opts {
                 float: left;
             }
             .nav-opts:hover {
                 background-color: #9a9a9a;
+                /* font-weight increases button width, text-shadow looks bad*/
+                /* font-weight: bold; */
+                /* text-shadow: 0px 0px 1px #000000; */
             }
             #nav-opts-home {
                 background-color: #e3e3e3;
@@ -47,14 +59,16 @@
             <nav>
                 <ul id="navbar">
                     <li class="nav-opts" id="nav-opts-home"><a class="nav-a" href="index.html"><p class="nav-text">Samar Dikshit</p></a></li>
-                    <li class="nav-opts"><a class="nav-a"><p class="nav-text">Projects</p></a></li>
-                    <li class="nav-opts"><a class="nav-a"><p class="nav-text">Experience and Academics</p></a></li>
-                    <li class="nav-opts"><a class="nav-a"><p class="nav-text">CV</p></a></li>
-                    <li class="nav-opts"><a class="nav-a"><p class="nav-text">Photography</p></a></li>
-                    <a href="https://github.com/samar14641" target="_blank"><img src="resources/github.png" class="header-img"></a>
-                    <a href="https://www.linkedin.com/in/samar-dikshit/" target="_blank"><img src="resources/linkedin.png" class="header-img"></a></a>
-                    <a href="mailto:samard05@gmail.com?cc=dikshit.s@northeastern.edu"><img src="resources/gmail.png" class="header-img"></a>
-                    <a href="https://www.instagram.com/samar14641/" target="_blank"><img src="resources/insta.png" class="header-img"></a>
+                    <li class="nav-opts"><a class="nav-a" href="#"><p class="nav-text">Projects</p></a></li>
+                    <li class="nav-opts"><a class="nav-a" href="#"><p class="nav-text">Experience and Academics</p></a></li>
+                    <li class="nav-opts"><a class="nav-a" href="#"><p class="nav-text">CV</p></a></li>
+                    <li class="nav-opts"><a class="nav-a" href="#"><p class="nav-text">Photography</p></a></li>
+                    <li id="nav-icons">
+                        <a class="nav-icons-a" href="https://github.com/samar14641" target="_blank"><img src="resources/github.png" class="header-img"></a>
+                        <a class="nav-icons-a" href="https://www.linkedin.com/in/samar-dikshit/" target="_blank"><img src="resources/linkedin.png" class="header-img"></a>
+                        <a class="nav-icons-a" href="mailto:samard05@gmail.com?cc=dikshit.s@northeastern.edu"><img src="resources/gmail.png" class="header-img"></a>
+                        <a class="nav-icons-a" href="https://www.instagram.com/samar14641/" target="_blank"><img src="resources/insta.png" class="header-img"></a>
+                    </li>
                 </ul>
             </nav>
         </div>
