@@ -26,6 +26,9 @@
                 list-style-type: none;
                 margin: 0;
                 padding: 0;
+                position: fixed;
+                top: 0;
+                width: 100%;
                 overflow: hidden;
                 background-color: #f5f2f2;
             }
@@ -61,9 +64,17 @@
             p {
                 font-family: 'Roboto', sans-serif;
             }
+            .text-data {
+                font-family: 'Roboto', sans-serif;
+                font-size: medium;
+            }
             .text-header {
                 font-family: 'Roboto', sans-serif;
                 text-align: center;
+            }
+            .text-title {
+                font-family: 'Roboto', sans-serif;
+                font-size: larger;
             }
         </style>
     </head>
@@ -86,15 +97,50 @@
             </nav>
         </div>
         <div id="main-content">
-            <h3 class="text-header">Experience</h3>
+            <h2 class="text-header">Experience</h2>
             <div class="main-sub-content" id="expr-div">
                 <img src="resources/sign.png" alt="under construction sign">
-                <p>experience goes here</p>
+                <p>
+                    <b class="text-title">Software Development Intern, Pepper Cloud</b><br>
+                    Bangalore, India<br><small>January 2019 - July 2019</small>
+                    <ul class="text-data">
+                        <li><a href="https://peppercloud.com/">Pepper Cloud</a> is a ...</li>
+                        <li>Point 2</li>
+                        <li>Point 3</li>
+                    </ul>
+                </p>
+                <p>
+                    <b class="text-title">Software Development Intern, iEnabler</b><br>
+                    Bangalore, India<br><small>May 2018 - June 2018</small>
+                    <ul class="text-data">
+                        <li><a href="https://www.ienabler.co/">iEnabler</a> is a ...</li>
+                        <li>Point 2</li>
+                        <li>Point 3</li>
+                    </ul>
+                </p>
             </div>
-            <h3 class="text-header">Academics</h3>
+            <h2 class="text-header">Academics</h2>
             <div class="main-sub-content" id="acad-div">
-                <p>academics go here</p>
+                <p>
+                    <b class="text-title"><em>MS in Data Science, </em>Northeastern University</b><br>
+                    Khoury College of Computer Computer Sciences<br>Boston, MA<br><small>September 2019 - Present</small>
+                    <ul class="text-data">
+                        <li>Summer'20: <em>DS5230 Unsupervised Machine Learning (ongoing)</em></li>
+                        <li>Spring'20: CS5800 Algorithms, CS6200 Information Retrieval</li>
+                        <li>Fall'19: DS5020 Linear Algebra and Probability, DS5110 Data Management and Processing</li>
+                    </ul>
+                </p>
+                <p>
+                    <b class="text-title"><em>BTech in Computer and Communication Engineering, </em>Manipal Institute of Technology</b><br>
+                    Department of Information and Communication Technology<br>Manipal, India<br><small>July 2015 - July 2019</small>
+                    <ul class="text-data">
+                        <li>Point 1</li>
+                        <li>Point 2</li>
+                        <li>Point 3</li>
+                    </ul>
+                </p>
             </div>
+            <p><br><br><br>You can look at and download my CV by clicking on it at the nav bar at the top!</p>
         </div>
     </body>
 </html>
