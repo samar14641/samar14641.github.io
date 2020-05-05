@@ -12,15 +12,15 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <style>
-            #bio-div {
-                margin-left: 10px;
-            }
             body {
                 margin: 0;
             }
             .header-img {
                 height: 30px;
                 margin-right: 5px;
+            }
+            .main-sub-content {
+                margin-left: 10px;
             }
             #navbar {
                 list-style-type: none;
@@ -71,9 +71,9 @@
         <div>
             <nav>
                 <ul id="navbar">
-                    <li class="nav-opts" id="nav-opts-home"><a class="nav-a" href="index.html"><p class="nav-text">Samar Dikshit</p></a></li>
+                    <li class="nav-opts"><a class="nav-a" href="index.html"><p class="nav-text">Samar Dikshit</p></a></li>
                     <li class="nav-opts"><a class="nav-a" href="projects.html"><p class="nav-text">Projects</p></a></li>
-                    <li class="nav-opts"><a class="nav-a" href="exp.html"><p class="nav-text">Experience and Academics</p></a></li>
+                    <li class="nav-opts" id="nav-opts-home"><a class="nav-a" href="#"><p class="nav-text">Experience and Academics</p></a></li>
                     <li class="nav-opts"><a class="nav-a" href="photography.html"><p class="nav-text">Photography</p></a></li>
                     <li class="nav-opts" data-toggle="tooltip" data-placement="bottom" title="Last update: 4 May'20"><a class="nav-a" href="resources/Samar Dikshit Resume.pdf" target="_blank" ><p class="nav-text">CV</p></a></li>
                     <li id="nav-icons">
@@ -86,10 +86,14 @@
             </nav>
         </div>
         <div id="main-content">
-            <h3 class="text-header">site under construction</h3>
-            <div id="bio-div">
+            <h3 class="text-header">Experience</h3>
+            <div class="main-sub-content" id="expr-div">
                 <img src="resources/sign.png" alt="under construction sign">
-                <p>bio goes here</p>
+                <p>experience goes here</p>
+            </div>
+            <h3 class="text-header">Academics</h3>
+            <div class="main-sub-content" id="acad-div">
+                <p>academics go here</p>
             </div>
         </div>
     </body>
