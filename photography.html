@@ -12,27 +12,55 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <style>
+            * {
+                box-sizing: border-box;
+            }
             body {
+                background-color: #121212;
                 margin: 0;
+            }
+            .dot {
+                height: 15px;
+                width: 15px;
+                background-color: #ffffff;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.6s ease;
+            }
+            .active {
+                /* background-color: #0892d2; */
+                background-color: #673ab7;
+                border-radius: 50%;
             }
             .header-img {
                 font-family: 'Roboto', sans-serif;
                 height: 30px;
                 margin-right: 5px;
             }
-            #photo-div {
-                margin-left: 10px;
+            img {
+                vertical-align: middle;
             }
-            #photo-sub-div {
+            .img-caption {
+                color: #ffffff;
+                font-family: 'Roboto', sans-serif;
+                font-size: 12px;
+                position: absolute;
                 text-align: center;
+                width: 100%;
             }
+            .img-slideshow {
+                display: none;
+            }
+            /* #main-content {
+                margin-top: 71.2px;
+            } */
             #navbar {
                 list-style-type: none;
                 margin: 0;
                 padding: 0;
-                position: fixed;
+                /* position: fixed;
                 top: 0;
-                width: 100%;
+                width: 100%; */
                 overflow: hidden;
                 background-color: #f5f2f2;
             }
@@ -66,9 +94,22 @@
                 font-family: 'Roboto', sans-serif;
             }
             p {
+                /* color: #ffffff; */
                 font-family: 'Roboto', sans-serif;
             }
+            #photo-div {
+                margin-left: 10px;
+                text-align: center;
+            }
+            /* #photo-sub-div {
+                text-align: center;
+            } */
+            #slideshow {
+                margin: auto;
+                position: relative;
+            }
             .text-header {
+                color: #ffffff;
                 font-family: 'Roboto', sans-serif;
                 text-align: center;
             }
@@ -95,13 +136,67 @@
         <div id="main-content">
             <h3 class="text-header">Photography</h3>
             <div id="photo-div">
-                <img src="resources/sign.png" alt="under construction sign">
+                <!-- <img src="resources/sign.png" alt="under construction sign">
                 <p>photos go here</p>
                 <div id="photo-sub-div">
                     <a href="https://www.instagram.com/p/Bkos0xkHS4O/" target="_blank"><img src="resources/quebec1.jpg" alt="Château Frontenac, Quebec City" style="height: 540px;"></a>
                     <p>Château Frontenac, Quebec City</p>
+                </div> -->
+                <div id="slideshow">
+                    <div class="img-slideshow">
+                        <img src="resources/quebec1.jpg" alt="Château Frontenac, Quebec City" style="height: 540px;">
+                        <div class="img-caption"><p>Château Frontenac, Quebec City</p></div>
+                    </div>
+                    <div class="img-slideshow">
+                        <img src="resources/hoode.jpg" alt="Hoode Beach, India" style="height: 540px;">
+                        <div class="img-caption"><p>Hoode Beach, India</p></div>
+                    </div>
+                    <div class="img-slideshow">
+                        <img src="resources/kudremukh.jpg" alt="Kudremukh, India" style="height: 540px;">
+                        <div class="img-caption"><p>Kudremukh, India</p></div>
+                    </div>
                 </div>
+                <br>
+                <br>
+                <div style="text-align:center">
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                </div>
+                <p style="color: #ffffff;"><br><br>See more <a href="https://www.instagram.com/samar14641/" target="_blank" style="color: #ff003f;">here</a></p>
             </div>
         </div>
+        <script>
+            let slideIndex = 0;
+            showSlides();
+
+            function showSlides()
+            {
+                let i;
+                let slides = document.getElementsByClassName("img-slideshow");
+                let dots = document.getElementsByClassName('dot');
+
+                for (i = 0; i < slides.length; i++)
+                {
+                    slides[i].style.display = "none";
+                }
+
+                slideIndex++;
+                if (slideIndex > slides.length)
+                {
+                    slideIndex = 1;
+                }
+
+                for (i = 0; i < dots.length; i++)
+                {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className = "dot active";
+                // dots[slideIndex - 1].style.backgroundColor = "#ffffff";
+                setTimeout(showSlides, 5000);
+            }
+        </script>
     </body>
 </html>
