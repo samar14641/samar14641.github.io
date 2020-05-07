@@ -33,6 +33,9 @@
                 border-radius: 50%;
             }
             .header-img {
+                /* filter: invert(95%) sepia(0%) saturate(18%) hue-rotate(358deg) brightness(104%) contrast(105%); */
+                /* filter: invert(100%) sepia(4%) saturate(164%) hue-rotate(214deg) brightness(114%) contrast(90%); */
+                color: #f5f5f2;
                 font-family: 'Roboto', sans-serif;
                 height: 30px;
                 margin-right: 5px;
@@ -41,7 +44,7 @@
                 vertical-align: middle;
             }
             .img-caption {
-                color: #ffffff;
+                color: #f5f2f2;
                 font-family: 'Roboto', sans-serif;
                 font-size: 12px;
                 position: absolute;
@@ -52,7 +55,7 @@
                 display: none;
             }
             .img-slideshow-img {
-                color: #ffffff;
+                color: #f5f2f2;
                 font-family: 'Roboto', sans-serif;
             }
             /* #main-content {
@@ -67,7 +70,7 @@
                 top: 0;
                 width: 100%; */
                 overflow: hidden;
-                background-color: #f5f2f2;
+                background-color: #000000;
             }
             #nav-icons {
                 float: right;
@@ -77,16 +80,19 @@
                 float: left;
             }
             .nav-opts:hover {
-                background-color: #9c9c9c;
+                /* background-color: #9c9c9c; */
+                background-color: #332940;
                 /* font-weight increases button width, text-shadow looks bad*/
                 /* font-weight: bold; */
                 /* text-shadow: 0px 0px 1px #000000; */
             }
             #nav-opts-home {
-                background-color: #bbbbbb;
+                /* background-color: #bbbbbb; */
+                background-color: #1f1b44;
             }
             #nav-opts-home:hover {
-                background-color: #9e9e9e;
+                /* background-color: #9e9e9e; */
+                background-color: #332940;
             }
             .nav-a {
                 color: #000000;
@@ -96,10 +102,10 @@
                 text-decoration: none;
             }
             .nav-text {
+                color: #f5f2f2;
                 font-family: 'Roboto', sans-serif;
             }
             p {
-                /* color: #ffffff; */
                 font-family: 'Roboto', sans-serif;
             }
             #photo-div {
@@ -114,7 +120,7 @@
                 position: relative;
             }
             .text-header {
-                color: #ffffff;
+                color: #f5f2f2;
                 font-family: 'Roboto', sans-serif;
                 text-align: center;
             }
@@ -130,10 +136,10 @@
                     <li class="nav-opts" id="nav-opts-home"><a class="nav-a" href="#"><p class="nav-text">Photography</p></a></li>
                     <li class="nav-opts" data-toggle="tooltip" data-placement="bottom" title="Last update: 6 May'20"><a class="nav-a" href="resources/Samar Dikshit Resume.pdf" target="_blank" ><p class="nav-text">CV</p></a></li>
                     <li id="nav-icons">
-                        <a class="nav-icons-a" href="https://github.com/samar14641" target="_blank"><img src="resources/github.png" class="header-img" alt="GitHub"></a>
-                        <a class="nav-icons-a" href="https://www.linkedin.com/in/samar-dikshit/" target="_blank"><img src="resources/linkedin.png" class="header-img" alt="LinkedIn"></a>
-                        <a class="nav-icons-a" href="mailto:samard05@gmail.com?cc=dikshit.s@northeastern.edu&subject=[From website] "><img src="resources/gmail.png" class="header-img" alt="Email me"></a>
-                        <a class="nav-icons-a" href="https://www.instagram.com/samar14641/" target="_blank"><img src="resources/insta.png" class="header-img" alt="Instagram"></a>
+                        <a class="nav-icons-a" href="https://github.com/samar14641" target="_blank"><img src="resources/github_d.png" class="header-img" alt="GitHub"></a>
+                        <a class="nav-icons-a" href="https://www.linkedin.com/in/samar-dikshit/" target="_blank"><img src="resources/linkedin_d.png" class="header-img" alt="LinkedIn"></a>
+                        <a class="nav-icons-a" href="mailto:samard05@gmail.com?cc=dikshit.s@northeastern.edu&subject=[From website] "><img src="resources/mail_d.png" class="header-img" alt="Email me"></a>
+                        <a class="nav-icons-a" href="https://www.instagram.com/samar14641/" target="_blank"><img src="resources/insta_d.png" class="header-img" alt="Instagram"></a>
                     </li>
                 </ul>
             </nav>
@@ -141,11 +147,7 @@
         <div id="main-content">
             <h3 class="text-header">Photography</h3>
             <div id="photo-div">
-                <!-- <img src="resources/sign.png" alt="under construction sign">
-                <p>photos go here</p>
-                <div id="photo-sub-div">
-                    <a href="https://www.instagram.com/p/Bkos0xkHS4O/" target="_blank"><img src="resources/quebec1.jpg" alt="Château Frontenac, Quebec City" style="height: 540px;"></a>
-                    <p>Château Frontenac, Quebec City</p>
+                <!-- <div id="photo-sub-div">
                 </div> -->
                 <div id="slideshow">
                     <div class="img-slideshow">
@@ -173,7 +175,7 @@
                     <span class="dot"></span> 
                     <span class="dot"></span> 
                 </div>
-                <p style="color: #ffffff;"><br><br>See more <a href="https://www.instagram.com/samar14641/" target="_blank" style="color: #ff003f;">here</a></p>
+                <p style="color: #f5f2f5;"><br><br>See more <a href="https://www.instagram.com/samar14641/" target="_blank" style="color: #ff003f;">here</a></p>
             </div>
         </div>
         <script>
@@ -204,7 +206,6 @@
 
                 slides[slideIndex - 1].style.display = "block";
                 dots[slideIndex - 1].className = "dot active";
-                // dots[slideIndex - 1].style.backgroundColor = "#ffffff";
                 setTimeout(showSlides, 5000);
             }
         </script>
