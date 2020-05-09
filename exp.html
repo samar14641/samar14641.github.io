@@ -37,6 +37,14 @@
             .main-sub-content {
                 margin-left: 10px;
             }
+            .main-sub-content::after {
+                content: "";
+                display: block;
+                margin: 0 auto;
+                width: 95%;
+                padding-top: 10px;
+                border-bottom: 1px solid #000000;
+            }
             #navbar {
                 list-style-type: none;
                 margin: 0;
@@ -78,8 +86,8 @@
             }
             p {
                 font-family: 'Roboto', sans-serif;
-                text-align: justify;
-                text-justify: inter-word;
+                /* text-align: justify;
+                text-justify: inter-word; */
             }
             .row:after {
                 content: "";
@@ -159,7 +167,7 @@
                 </div>
             </div>
             <h2 class="text-header">Academics</h2>
-            <div class="main-sub-content" id="expr-div">
+            <div class="main-sub-content" id="acad-div">
                 <div class="row">
                     <div class="column">
                         <p>
