@@ -20,9 +20,6 @@
                 height: 30px;
                 margin-right: 5px;
             }
-            #proj-div {
-                margin-left: 10px;
-            }
             #navbar {
                 list-style-type: none;
                 margin: 0;
@@ -61,10 +58,18 @@
             }
             p {
                 font-family: 'Roboto', sans-serif;
+                text-align: justify;
+                text-justify: inter-word;
+            }
+            #proj-div {
+                margin-left: 10px;
             }
             .text-header {
                 font-family: 'Roboto', sans-serif;
                 text-align: center;
+            }
+            ul {
+                font-family: 'Roboto', sans-serif;
             }
         </style>
     </head>
@@ -90,7 +95,36 @@
             <h3 class="text-header">Projects</h3>
             <div id="proj-div">
                 <img src="resources/sign.png" alt="under construction sign">
-                <p>projects go here</p>
+                <div class="proj-content">
+                    <p>
+                        <b>Assessing Similarities and Differences between News Sources in the United States</b>
+                    </p>
+                </div>
+                <div class="proj-content">
+                    <p>
+                        <b>r/Coronavirus Analysis</b>
+                    </p>
+                </div>
+                <div class="proj-content">
+                    <p>
+                        <b>Training an Algorithm to Predict a Ranked List</b>
+                    </p>
+                </div>
+                <div class="proj-content">
+                    <p>
+                        <b>Information Retrieval and Evaluation</b>
+                        <ul>
+                            <li>Webscraper</li>
+                            <li>PageRank and HITS</li>
+                            <li>trec eval</li>
+                        </ul>
+                    </p>
+                </div>
+                <!-- <div class="proj-content">
+                    <p>
+                        <b>Dummy Project Div</b>
+                    </p>
+                </div> -->
             </div>
         </div>
     </body>
