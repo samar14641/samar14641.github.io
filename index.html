@@ -12,16 +12,47 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <style>
+            * {
+                box-sizing: border-box;
+            }
             #bio-div {
-                margin-left: 10px;
+                margin: 0 auto;
+                width: 65%;
+            }
+            #bio-content:after {
+                content: "May 2020";
+                font-family: 'Roboto', sans-serif;
+                font-size: xx-small;
+                text-align: right;
+                display: block;
+                margin: 0 auto;
+                width: 95%;
+                padding-top: 10px;
+                border-bottom: 1px solid #000000;
             }
             body {
                 margin: 0;
+            }
+            .column {
+                float: left;
+                width: 50%;
+                padding: 10px;
+                text-align: center;
+            }
+            #face-img {
+                border-radius: 50%;
+                /* float: left; */
+                margin-top: 40px;
+                width: 220px;
             }
             .header-img {
                 font-family: 'Roboto', sans-serif;
                 height: 30px;
                 margin-right: 5px;
+            }
+            .img-p {
+                position: absolute;
+                width: 24px;
             }
             #navbar {
                 list-style-type: none;
@@ -61,6 +92,8 @@
             }
             p {
                 font-family: 'Roboto', sans-serif;
+                text-align: justify;
+                text-justify: inter-word;
             }
             .text-header {
                 font-family: 'Roboto', sans-serif;
@@ -87,10 +120,23 @@
             </nav>
         </div>
         <div id="main-content">
-            <h3 class="text-header">site under construction</h3>
+            <div id="empty-div" style="margin-top: 60px;"></div>
             <div id="bio-div">
-                <img src="resources/sign.png" alt="under construction sign">
-                <p>bio goes here</p>
+                <div class="column">
+                    <img src="resources/me.jpg" id="face-img" alt="Samar">
+                </div>
+                <div class="column" id="bio-content">
+                    <h2 class="text-header">Samar Dikshit</h2>
+                    <p>
+                        <img src="resources/location.png" class="img-p" alt="Location:"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Boston, MA
+                        <br><br>
+                        I am a student at Northeastern University's MS in Data Science program, and expect to graduate in December 2021.  
+                        <br>
+                        My areas of interest include data management and statistical analysis, natural language processing, and the applications of data science and machine learning in astronomy, aviation, GIS, and motorsport. 
+                        <br>
+                        Apart from these, my hobbies include photography, travelling as much as I can, and discovering blues, rock, and jazz music. 
+                    </p>
+                </div>
             </div>
         </div>
     </body>
