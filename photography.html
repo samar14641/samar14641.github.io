@@ -29,7 +29,6 @@
                 transition: background-color 0.6s ease;
             }
             .active {
-                /* background-color: #0892d2; */
                 background-color: #673ab7;
                 border-radius: 50%;
             }
@@ -84,18 +83,15 @@
                 float: left;
             }
             .nav-opts:hover {
-                /* background-color: #9c9c9c; */
                 background-color: #332940;
                 /* font-weight increases button width, text-shadow looks bad*/
                 /* font-weight: bold; */
                 /* text-shadow: 0px 0px 1px #000000; */
             }
             #nav-opts-home {
-                /* background-color: #bbbbbb; */
                 background-color: #1f1b44;
             }
             #nav-opts-home:hover {
-                /* background-color: #9e9e9e; */
                 background-color: #332940;
             }
             .nav-a {
@@ -131,8 +127,6 @@
                 left: 0;
             }
             #next:hover, #prev:hover {
-                /* background-color: rgba(0, 0, 0, 0.8); */
-                /* color: #673ab7; */
                 color: #ff003f;
             }
             p {
@@ -142,6 +136,22 @@
                 margin-left: 10px;
                 margin-right: 10px;
                 text-align: center;
+            }
+            #photo-grid {
+                line-height: 0;
+                -webkit-column-count: 3;
+                -webkit-column-gap: 0px;
+                -moz-column-count: 3;
+                -moz-column-gap: 0px;
+                column-count: 3;
+                column-gap: 0px;
+            }
+            .photo-grid-img {
+                color: #f5f2f2;
+                font-family: 'Roboto', sans-serif;
+                width: 100% !important;
+                height: auto;
+                max-height: 319px;
             }
             /* #photo-sub-div {
                 text-align: center;
@@ -208,6 +218,22 @@
                     <span class="dot" onclick="currentSlide(3)"></span> 
                     <span class="dot" onclick="currentSlide(4)"></span> 
                 </div>
+                <br>
+                <br>
+                <section id="photo-grid">
+                    <img src="resources/grid/astro.jpg" class="photo-grid-img" alt="Winter Sky">
+                    <img src="resources/grid/quebec2.jpg" class="photo-grid-img" alt="Quebec City">
+                    <img src="resources/grid/budapest.jpg" class="photo-grid-img" alt="Budapest">
+                    <img src="resources/grid/c17ai19.jpg" class="photo-grid-img" alt="Aero India 2019">
+                    <img src="resources/grid/kudremukh2.jpg" class="photo-grid-img" alt="Kudremukh road">
+                    <img src="resources/grid/local.jpg" class="photo-grid-img" alt="Bombay">
+                    <img src="resources/kudremukh.jpg" class="photo-grid-img" alt="Kudremukh landscape">
+                    <img src="resources/grid/sun1.JPG" class="photo-grid-img" alt="Sunset">
+                    <img src="resources/grid/gokarna.jpg" class="photo-grid-img" alt="Gokarna">
+                    <img src="resources/grid/niagara.jpg" class="photo-grid-img" alt="Niagara Falls">
+                    <img src="resources/grid/blr2.jpg" class="photo-grid-img" alt="Bangalore">
+                    <img src="resources/grid/bratislava.jpg" class="photo-grid-img" alt="Bratislava">
+                </section>
                 <p style="color: #f5f2f2;"><br><br>See more <a href="https://www.instagram.com/samar14641/" target="_blank" style="color: #ff003f;">here</a></p>
             </div>
         </div>
@@ -244,7 +270,6 @@
                     slides[i].style.display = "none";
                 }
 
-                // slideIndex++;
                 if (n > slides.length)
                 {
                     slideIndex = 1;
