@@ -130,6 +130,7 @@
                 color: #ff003f;
             }
             p {
+                color: #f5f2f2;
                 font-family: 'Roboto', sans-serif;
             }
             #photo-div {
@@ -153,6 +154,13 @@
                 height: auto;
                 max-height: 319px;
             }
+            .photo-grid-img:hover {
+                opacity: 0.7;
+            }
+            /* #photo-grid:hover img{
+                height: 540px;
+                width: auto;
+            } */
             /* #photo-sub-div {
                 text-align: center;
             } */
@@ -164,6 +172,13 @@
                 color: #f5f2f2;
                 font-family: 'Roboto', sans-serif;
                 text-align: center;
+            }
+            @media (max-width: 820px) {
+                #photo-grid {
+                    -webkit-column-count: 2;
+                    -moz-column-count: 2;
+                    column-count: 2;
+                }
             }
         </style>
     </head>
@@ -221,19 +236,24 @@
                 <br>
                 <br>
                 <section id="photo-grid">
-                    <img src="resources/grid/astro.jpg" class="photo-grid-img" alt="Winter Sky">
-                    <img src="resources/grid/quebec2.jpg" class="photo-grid-img" alt="Quebec City">
-                    <img src="resources/grid/budapest.jpg" class="photo-grid-img" alt="Budapest">
-                    <img src="resources/grid/c17ai19.jpg" class="photo-grid-img" alt="Aero India 2019">
-                    <img src="resources/grid/kudremukh2.jpg" class="photo-grid-img" alt="Kudremukh road">
-                    <img src="resources/grid/local.jpg" class="photo-grid-img" alt="Bombay">
-                    <img src="resources/kudremukh.jpg" class="photo-grid-img" alt="Kudremukh landscape">
-                    <img src="resources/grid/sun1.JPG" class="photo-grid-img" alt="Sunset">
-                    <img src="resources/grid/gokarna.jpg" class="photo-grid-img" alt="Gokarna">
-                    <img src="resources/grid/niagara.jpg" class="photo-grid-img" alt="Niagara Falls">
-                    <img src="resources/grid/blr2.jpg" class="photo-grid-img" alt="Bangalore">
-                    <img src="resources/grid/bratislava.jpg" class="photo-grid-img" alt="Bratislava">
+                    <img src="resources/grid/astro.jpg" class="photo-grid-img" id="stars" alt="Winter Sky" onclick="gridImgClick('stars')">
+                    <img src="resources/grid/quebec2.jpg" class="photo-grid-img" id="qbc" alt="Quebec City" onclick="gridImgClick('qbc')">
+                    <img src="resources/grid/budapest.jpg" class="photo-grid-img" id="bud" alt="Budapest" onclick="gridImgClick('bud')">
+                    <img src="resources/grid/c17ai19.jpg" class="photo-grid-img" id="ai19" alt="C-17, Aero India 2019" onclick="gridImgClick('ai19')">
+                    <img src="resources/grid/kudremukh2.jpg" class="photo-grid-img" id="skd" alt="Sunrise at Kudremukh" onclick="gridImgClick('skd')">
+                    <img src="resources/grid/local.jpg" class="photo-grid-img" id="bom" alt="Bombay" onclick="gridImgClick('bom')">
+                    <img src="resources/kudremukh.jpg" class="photo-grid-img" id="kdk" alt="Kudremukh" onclick="gridImgClick('kdk')">
+                    <img src="resources/grid/sun1.JPG" class="photo-grid-img" id="sun" alt="Sunset" onclick="gridImgClick('sun')">
+                    <img src="resources/grid/gokarna.jpg" class="photo-grid-img" id="gkn" alt="Paradise Beach, Gokarna" onclick="gridImgClick('gkn')">
+                    <img src="resources/grid/niagara.jpg" class="photo-grid-img" id="ngf" alt="Niagara Falls" onclick="gridImgClick('ngf')">
+                    <img src="resources/grid/blr2.jpg" class="photo-grid-img" id="blr" alt="Bangalore" onclick="gridImgClick('blr')">
+                    <img src="resources/grid/bratislava.jpg" class="photo-grid-img" id="bat" alt="Bratislava" onclick="gridImgClick('bat')">
                 </section>
+                <!-- <div id="modal">
+                    <span id="close-cross" onclick="closeFn()">&times;</span>
+                    <img id="modal-img">
+                    <p id="modal-caption"></p>
+                </div> -->
                 <p style="color: #f5f2f2;"><br><br>See more <a href="https://www.instagram.com/samar14641/" target="_blank" style="color: #ff003f;">here</a></p>
             </div>
         </div>
@@ -241,6 +261,8 @@
             let slideIndex = 1;
             let timer = null;
             showSlides(slideIndex);
+
+            let modal = document.getElementById('modal');
 
             function nextSlide(n)
             {
@@ -289,6 +311,25 @@
                 dots[slideIndex - 1].className = "dot active";
                 timer = setTimeout(showSlides, 5000);
             }
+
+            // function gridImgClick(imgID)
+            // {
+            //     // console.log(imgID);
+
+            //     let img = document.getElementById(imgID);
+            //     // let modal = document.getElementById('modal');
+            //     let modalImg = document.getElementById('modal-img');
+            //     let modalCap = document.getElementById('modal-caption');
+
+            //     modal.style.display = 'block';
+            //     modalImg.src = img.src;
+            //     modalCap.textContent = 'Hi';
+            // }
+
+            // function closeFn()
+            // {
+            //     modal.style.display = 'none';
+            // }
         </script>
     </body>
 </html>
