@@ -105,7 +105,7 @@
                     <li class="nav-opts" id="nav-opts-home"><a class="nav-a" href="#"><p class="nav-text">Projects</p></a></li>
                     <li class="nav-opts"><a class="nav-a" href="exp.html"><p class="nav-text">Experience and Academics</p></a></li>
                     <li class="nav-opts"><a class="nav-a" href="photography.html"><p class="nav-text">Photography</p></a></li>
-                    <li class="nav-opts" data-toggle="tooltip" data-placement="bottom" title="Last update: 1 June'21"><a class="nav-a" href="resources/Samar Dikshit Resume.pdf" target="_blank" ><p class="nav-text">CV</p></a></li>
+                    <li class="nav-opts" data-toggle="tooltip" data-placement="bottom" title="Last update: 13 June'21"><a class="nav-a" href="resources/Samar Dikshit Resume.pdf" target="_blank" ><p class="nav-text">CV</p></a></li>
                     <li id="nav-icons">
                         <a class="nav-icons-a" href="https://github.com/samar14641" target="_blank"><img src="resources/github.png" class="header-img" alt="GitHub"></a>
                         <a class="nav-icons-a" href="https://www.linkedin.com/in/samar-dikshit/" target="_blank"><img src="resources/linkedin.png" class="header-img" alt="LinkedIn"></a>
@@ -197,11 +197,11 @@
                 </div>
                 <div class="proj-content">
                     <p>
-                        <b>Information Retrieval and Evaluation</b>
+                        <b>World War II Information Retrieval and Evaluation</b>
                         <br><small>Webscraping and indexing done along with <a class="p-a" href="https://www.khoury.northeastern.edu/people/rithika-lakshminarayanan/" target="_blank">Rithika Lakshminarayanan</a> and Celia Sherry</small>
                         <br><small>February 2020 - April 2020</small>
                         <ul>
-                            <li>Webscraping and indexing: We each scraped around 40,000 articles related to our topic (World War II), and created an index of unique documents on Elasticsearch (~ 92,000 documents)</li>
+                            <li>Webscraping and indexing: We each scraped around 40,000 articles from 5 unique seed URLs, processed and cleaned them using NLTK, and created an index of unique documents on Elasticsearch (~ 92,000 documents)</li>
                             <li><a class="p-a" href="https://github.com/samar14641/webgraph-computation" target="_blank">PageRank and HITS</a> were then used to rate the relevance of the pages</li>
                             <li>A <a class="p-a" href="https://github.com/samar14641/trec_eval" target="_blank">trec eval</a> script was written to calculate IR metrics such as precision, recall, and DCG</li>
                         </ul>
@@ -214,7 +214,9 @@
                         <br><small>October 2019 - November 2019</small>
                         <ul>
                             <li>Goal: To compare how different news organisations report political events, and determine any bias that may exist</li>
-                            <li>We used articles from 8 different news sites from Aug'19 to Nov'19 to analyse how various political events are reported on by sources on different sides of the political spectrum (left, centre, and right)</li>
+                            <li>We scraped around 72,000 articles from 8 different news sites from Aug'19 to Nov'19 to analyse how various political events are reported on by sources on different sides of the political spectrum (left, centre, and right)</li>
+                            <li>Using bigrams, word associations, and sentiment analysis, we were able to visualise and prove the existence of media bias depending on political lean of the organisation</li>
+                            <li>We developed Fasttext and SVM models with a peak sensitivity and specificity of 92.86% and 92.54% to classify articles by political lean based on their headlines</li>
                             <li>Read the <a class="p-a" href="resources/Media Bias Report.pdf" target="_blank">report</a> or view the <a class="p-a" href="resources/Media Bias PPT.pdf" target="_blank">presentation</a></li>
                             <li><a class="p-a" href="https://github.com/samar14641/media-bias-project" target="_blank">GitHub</a></li>
                         </ul>
