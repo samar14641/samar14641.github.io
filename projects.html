@@ -123,7 +123,7 @@
                         <b>Comparing Quantitative Linguistics of a Corpus with Vocabulary Networks</b>
                         <br><small>November 2021 - Present</small>
                         <ul>
-                            <li>Goal: To compare and correlate emperical results of quantitative linguistic measures with metrics of the corpus as a vocabulary networl</li>
+                            <li>Goal: To compare and correlate emperical results of quantitative linguistic measures with metrics of the corpus as a vocabulary network</li>
                             <li><a class="p-a" href="https://github.com/samar14641/ql-vocab-nets" target="_blank">GitHub</a></li>
                         </ul>
                     </p>
@@ -132,9 +132,18 @@
                     <p>
                         <b>COVID-19 in US Counties: A Network Analysis</b>
                         <br><small>Working along with <a class="p-a" href="https://www.khoury.northeastern.edu/people/rithika-lakshminarayanan/" target="_blank">Rithika Lakshminarayanan</a></small>
-                        <br><small>September 2021 - Present</small>
+                        <br><small>September 2021 - December 2021</small>
                         <ul>
-                            <li>Goal: To analyse how COVID-19 spread over time from an administrative region perspective (counties and states)</li>
+                            <li>Goal: To analyse how COVID-19 spread over time at a county level</li>
+                            <li>We created a correlation network using data from Feb'20 to Oct'21:</li>
+                                <ul>
+                                    <li>Nodes: Counties (929 nodes)</li>
+                                    <li>Edges: An edge exists between a pair of nodes if the correlation coefficient of the number of new cases is greater than 0.75 (5,566 edges)</li>
+                                    <li>Edge weight: Correlation coefficient value</li>
+                                    <li>Degree exponent: 4.05</li>
+                                </ul>
+                            <li>Using greedy modularity maximisation and 5-cliques, we were able to detect communites that correspond to geographical regions, and communites where nodes have geographical proximity</li>
+                            <li>View the <a class="p-a" href="resources/COVID-19 in US Counties.pdf" target="_blank">presentation</a></li>
                             <li><a class="p-a" href="https://github.com/samar14641/covid-us-networks" target="_blank">GitHub</a></li>
                         </ul>
                     </p>
