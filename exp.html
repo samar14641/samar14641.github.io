@@ -119,14 +119,14 @@
             <nav>
                 <ul id="navbar">
                     <li class="nav-opts"><a class="nav-a" href="index.html"><p class="nav-text">Samar Dikshit</p></a></li>
+                    <li class="nav-opts" id="nav-opts-home"><a class="nav-a" href="exp.html"><p class="nav-text">Experience and Academics</p></a></li>
                     <li class="nav-opts"><a class="nav-a" href="projects.html"><p class="nav-text">Projects</p></a></li>
-                    <li class="nav-opts" id="nav-opts-home"><a class="nav-a" href="#"><p class="nav-text">Experience and Academics</p></a></li>
+                    <li class="nav-opts" data-toggle="tooltip" data-placement="bottom" title="Last update: August 2024"><a class="nav-a" href="resources/Samar Dikshit Resume.pdf" target="_blank" ><p class="nav-text">Resume</p></a></li>
                     <li class="nav-opts"><a class="nav-a" href="photography.html"><p class="nav-text">Photography</p></a></li>
-                    <li class="nav-opts" data-toggle="tooltip" data-placement="bottom" title="Last update: 24 September'21"><a class="nav-a" href="resources/Samar Dikshit Resume.pdf" target="_blank" ><p class="nav-text">CV</p></a></li>
                     <li id="nav-icons">
-                        <a class="nav-icons-a" href="https://github.com/samar14641" target="_blank"><img src="resources/github.png" class="header-img" alt="GitHub"></a>
                         <a class="nav-icons-a" href="https://www.linkedin.com/in/samar-dikshit/" target="_blank"><img src="resources/linkedin.png" class="header-img" alt="LinkedIn"></a>
                         <a class="nav-icons-a" href="mailto:samard05@gmail.com?cc=dikshit.s@northeastern.edu&subject=[From website] "><img src="resources/gmail2.png" class="header-img" alt="Email me"></a>
+                        <a class="nav-icons-a" href="https://github.com/samar14641" target="_blank"><img src="resources/github.png" class="header-img" alt="GitHub"></a>
                         <a class="nav-icons-a" href="https://www.instagram.com/samar14641/" target="_blank"><img src="resources/insta.png" class="header-img" alt="Instagram"></a>
                     </li>
                 </ul>
@@ -138,20 +138,42 @@
                 <div class="row">
                     <div class="column">
                         <p>
+                            <b class="text-title">Senior Data Scientist</b><br>
+                            <p>Product Data, Sonos Inc.<br>Boston, MA<br><small>October 2023 - Present</small></p>
+                            <ul class="text-data">
+                                <li>I led a cross-functional team with hardware and user interface designers focused on understanding user behavior, control patterns, and feature discoverability across speaker categories to drive decisions for new products and features e.g. headphone design, optimal button placement, Bluetooth availability, power/battery saver mode etc.</li>
+                                <li>I supported the development of Gaussian Process models in Python to automatically set speaker volumes, reducing volume change interactions for users by over 50%.</li>
+                                <li>I built a feature generation framework with dbt and Snowflake that creates 7-10 million rows of product usage-based feature values per day for use in downstream machine learning tasks.</li>
+                                <li>I contributed to the development of a Python-based machine learning pipeline to cluster and segment over 10 million users using k-means with over 80 features.</li>
+                            </ul>
                             <b class="text-title">Data Scientist</b><br>
-                            Product Data, Sonos<br>Boston, MA<br><small>January 2022 - Present</small>
-                            <!-- <ul class="text-data">
-                                <li>Instructors: <a class="p-a" href="https://www.ccs.neu.edu/home/rachlin/" target="_blank">John Rachlin</a></li>
-                                <li><a class="p-a" href="https://www.ccs.neu.edu/home/rachlin/python/ds3500/index.html" target="_blank">Course website</a></li>
-                                <li>I taught a class on APIs <a class="p-a", href="https://github.com/samar14641/api-ds3500", target="_blanks">(code and slides on GitHub)</a></li>
-                                <li>Office Hours: Tue 1500 - 1600, Thu 1000 - 1200, and Fri 1300 - 1500 Eastern on Zoom (link on Piazza)</li>
-                            </ul> -->
+                            <p>Product Data, Sonos Inc.<br>Boston, MA<br><small>January 2022 - September 2023</small></p>
+                            <ul class="text-data">
+                                <li>I developed SQL-based statistical and probabilistic methods to discover and predict usage routines for over 8 million users, and achieved R<sup>2</sup> values between 0.6 - 0.85, and productionized them using dbt.</li>
+                                <li>I built a proof-of-concept collaborative recommendation system using Python for Sonos Radio, a radio/music service with an average weekly user base of 1 million.</li>
+                                <li>I collaborated with the User Research team in designing and conducting user research studies to understand the effect of new software automations on user behavior, leading to the development of improved volume control and speech enhancement features.</li>
                         </p>
                     </div>
                     <div class="column">
                         <img src="resources/sonos.png" alt="Sonos" style="width: 150px; display: block; margin-left: auto; margin-right: auto;">
                     </div>
                 </div>
+                <!-- <div class="row">
+                    <div class="column">
+                        <p>
+                            <b class="text-title">Data Scientist</b><br>
+                            Product Data, Sonos Inc.<br>Boston, MA<br><small>January 2022 - September 2023</small>
+                            <ul class="text-data">
+                                <li>A</li>
+                                <li>B</li>
+                                <li>C</li>
+                            </ul>
+                        </p>
+                    </div>
+                    <div class="column">
+                        <img src="resources/sonos.png" alt="Sonos" style="width: 150px; display: block; margin-left: auto; margin-right: auto;">
+                    </div>
+                </div> -->
                 <div class="row">
                     <div class="column">
                         <p>
@@ -161,7 +183,7 @@
                                 <li>Instructors: <a class="p-a" href="https://www.ccs.neu.edu/home/rachlin/" target="_blank">John Rachlin</a></li>
                                 <li><a class="p-a" href="https://www.ccs.neu.edu/home/rachlin/python/ds3500/index.html" target="_blank">Course website</a></li>
                                 <li>I taught a class on APIs <a class="p-a", href="https://github.com/samar14641/api-ds3500", target="_blanks">(code and slides on GitHub)</a></li>
-                                <li>Office Hours: Tue 1500 - 1600, Thu 1000 - 1200, and Fri 1300 - 1500 Eastern on Zoom (link on Piazza)</li>
+                                <!-- <li>Office Hours: Tue 1500 - 1600, Thu 1000 - 1200, and Fri 1300 - 1500 Eastern on Zoom (link on Piazza)</li> -->
                             </ul>
                         </p>
                     </div>
@@ -196,7 +218,7 @@
                                 <li>Instructors: <a class="p-a" href="https://www.ccs.neu.edu/home/rachlin/" target="_blank">John Rachlin</a> and <a class="p-a" href="https://khoury.northeastern.edu/home/laney/" target="_blank">Laney Strange</a> (CS practicum)</li>
                                 <li><a class="p-a" href="https://www.ccs.neu.edu/home/rachlin/python/ds2000/" target="_blank">Course website</a></li>
                                 <li><a class="p-a" href="https://course.ccs.neu.edu/ds2001/cs/" target="_blank">Practicum website</a></li>
-                                <li>Office Hours: Mon and Fri 1600 - 1800 Eastern on Zoom (link on Piazza)</li>
+                                <!-- <li>Office Hours: Mon and Fri 1600 - 1800 Eastern on Zoom (link on Piazza)</li> -->
                             </ul>
                         </p>
                     </div>
@@ -232,7 +254,7 @@
                             <ul class="text-data">
                                 <li>Instructor: <a class="p-a" href="https://tlarock.github.io/" target="_blank">Timothy LaRock</a></li>
                                 <li><a class="p-a" href="https://tlarock.github.io/teaching/cs3000/syllabus.html" target="_blank">Course website</a></li>
-                                <li>Office Hours: Wed 1500 - 1600 Eastern and Fri 1100 - 1200 Eastern on Zoom (link on Piazza)</li>
+                                <!-- <li>Office Hours: Wed 1500 - 1600 Eastern and Fri 1100 - 1200 Eastern on Zoom (link on Piazza)</li> -->
                             </ul>
                         </p>
                     </div>
@@ -243,7 +265,7 @@
                 <div class="row">
                     <div class="column">
                         <p>
-                            <b class="text-title">Software Development Intern</b><br>
+                            <b class="text-title">Software Engineering Intern</b><br>
                             Pepper Cloud<br>Bangalore, India<br><small>January 2019 - July 2019</small>
                             <ul class="text-data">
                                 <li><a class="p-a" href="https://peppercloud.com/" target="_blank">Pepper Cloud</a> is building a smart CRM for B2B use by companies in various industries</li>
@@ -384,7 +406,7 @@
                     </div>
                 </div>
             </div>
-            <p style="margin-left: 10px; font-size: small;"><br><br><br>You can look at and download my CV by clicking on it at the nav bar at the top!</p>
+            <p style="margin-left: 10px; font-size: small;"><br><br><br>You can look at and download my resume by clicking on it at the nav bar at the top!</p>
         </div>
     </body>
 </html>
