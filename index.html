@@ -1,152 +1,155 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>Samar Dikshit</title>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-        <link href="favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
-        <link href="favicon/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
-        <link href="favicon/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
-        <link href="favicon/site.webmanifest" rel="manifest">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        <style>
-            * {
-                box-sizing: border-box;
-            }
-            #bio-div {
-                margin: 0 auto;
-                width: 65%;
-            }
-            #bio-content:after {
-                content: "September 2024";
-                font-family: 'Roboto', sans-serif;
-                font-size: xx-small;
-                text-align: right;
-                display: block;
-                margin: 0 auto;
-                width: 95%;
-                padding-top: 10px;
-                border-bottom: 1px solid #000000;
-            }
-            body {
-                margin: 0;
-            }
-            .column {
-                float: left;
-                width: 50%;
-                padding: 10px;
-                text-align: center;
-            }
-            #face-img {
-                border-radius: 50%;
-                /* float: left; */
-                margin-top: 80px;
-                width: 220px;
-            }
-            .header-img {
-                font-family: 'Roboto', sans-serif;
-                height: 30px;
-                margin-right: 5px;
-            }
-            .img-p {
-                position: absolute;
-                width: 24px;
-            }
-            #navbar {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-                overflow: hidden;
-                background-color: #f5f2f2;
-            }
-            #nav-icons {
-                float: right;
-                margin-top: 8px;
-            }
-            .nav-opts {
-                float: left;
-            }
-            .nav-opts:hover {
-                background-color: #9c9c9c;
-                /* font-weight increases button width, text-shadow looks bad*/
-                /* font-weight: bold; */
-                /* text-shadow: 0px 0px 1px #000000; */
-            }
-            #nav-opts-home {
-                background-color: #bbbbbb;
-            }
-            #nav-opts-home:hover {
-                background-color: #9e9e9e;
-            }
-            .nav-a {
-                color: #000000;
-                display: block;
-                padding: 0px 14px;
-                text-align: center;
-                text-decoration: none;
-            }
-            .nav-text {
-                font-family: 'Roboto', sans-serif;
-            }
-            p {
-                font-family: 'Roboto', sans-serif;
-                text-align: left;
-                /* text-align: justify;
-                text-justify: inter-word; */
-            }
-            /* .p-a {
-                color: #1034a6;
-            }
-            .p-a:visited {
-                color: #800080;
-            } */
-            .text-header {
-                font-family: 'Roboto', sans-serif;
-                text-align: center;
-            }
-        </style>
-    </head>
-    <body>
-        <div>
-            <nav>
-                <ul id="navbar">
-                    <li class="nav-opts" id="nav-opts-home"><a class="nav-a" href="index.html"><p class="nav-text">Samar Dikshit</p></a></li>
-                    <li class="nav-opts"><a class="nav-a" href="exp.html"><p class="nav-text">Experience and Academics</p></a></li>
-                    <li class="nav-opts"><a class="nav-a" href="projects.html"><p class="nav-text">Projects</p></a></li>
-                    <li class="nav-opts" data-toggle="tooltip" data-placement="bottom" title="Last update: Sept. 2024"><a class="nav-a" href="resources/Samar Dikshit Resume.pdf" target="_blank" ><p class="nav-text">Resume</p></a></li>
-                    <li class="nav-opts"><a class="nav-a" href="photography.html"><p class="nav-text">Photography</p></a></li>
-                    <li id="nav-icons">
-                        <a class="nav-icons-a" href="https://www.linkedin.com/in/samar-dikshit/" target="_blank"><img src="resources/linkedin.png" class="header-img" alt="LinkedIn"></a>
-                        <a class="nav-icons-a" href="mailto:samard05@gmail.com?cc=dikshit.s@northeastern.edu&subject=[From website] "><img src="resources/gmail2.png" class="header-img" alt="Email me"></a>
-                        <a class="nav-icons-a" href="https://github.com/samar14641" target="_blank"><img src="resources/github.png" class="header-img" alt="GitHub"></a>
-                        <a class="nav-icons-a" href="https://www.instagram.com/samar14641/" target="_blank"><img src="resources/insta.png" class="header-img" alt="Instagram"></a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <div id="main-content">
-            <div id="empty-div" style="margin-top: 60px;"></div>
-            <div id="bio-div">
-                <div class="column">
-                    <img src="resources/me.jpg" id="face-img" alt="Samar">
-                </div>
-                <div class="column" id="bio-content">
-                    <h2 class="text-header">Samar Dikshit</h2>
-                    <p>
-                        <img src="resources/location.png" class="img-p" alt="Location:"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cambridge / Boston, MA
-                        <br><br>
-                        I am a Senior Data Scientist at Sonos working on the Product Data team, and graduated from Northeastern University's MS in Data Science program in December 2021.  
-                        <!-- <br><br>
-                        I previously worked as an Analytics Engineer at DTonomy Inc. I have previously also worked as an Research Assistant and Teaching Assistant at Northeastern University. -->
-                        <br><br>
-                        My areas of interest include data management and statistical analysis, network analysis, NLP, and the application of data science and machine learning to astronomy, IoT products, and sustainable transit. 
-                        <br><br>
-                        Apart from these, my hobbies include photography, travelling as much as I can, and discovering blues, rock, and jazz music. 
-                    </p>
-                </div>
-            </div>
-        </div>
-    </body>
+   <head>
+       <meta charset="utf-8">
+       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+       <title>Samar Dikshit</title>
+       <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+       <link href="favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+       <link href="favicon/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+       <link href="favicon/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+       <link href="favicon/site.webmanifest" rel="manifest">
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+       <style>
+           * {
+               box-sizing: border-box;
+           }
+           #bio-div {
+               margin: 0 auto;
+               width: 65%;
+           }
+           #bio-content:after {
+               content: "Nov 2025";
+               font-family: 'Roboto', sans-serif;
+               font-size: xx-small;
+               text-align: right;
+               display: block;
+               margin: 0 auto;
+               width: 95%;
+               padding-top: 10px;
+               border-bottom: 1px solid #000000;
+           }
+           body {
+               margin: 0;
+           }
+           .column {
+               float: left;
+               width: 50%;
+               padding: 10px;
+               text-align: center;
+           }
+           #face-img {
+               border-radius: 50%;
+               /* float: left; */
+               margin-top: 80px;
+               width: 220px;
+           }
+           .header-img {
+               font-family: 'Roboto', sans-serif;
+               height: 30px;
+               margin-right: 5px;
+           }
+           .img-p {
+               position: absolute;
+               width: 20px;
+           }
+           #navbar {
+               list-style-type: none;
+               margin: 0;
+               padding: 0;
+               overflow: hidden;
+               background-color: #f5f2f2;
+           }
+           #nav-icons {
+               float: right;
+               margin-top: 8px;
+           }
+           .nav-opts {
+               float: left;
+           }
+           .nav-opts:hover {
+               background-color: #9c9c9c;
+               /* font-weight increases button width, text-shadow looks bad*/
+               /* font-weight: bold; */
+               /* text-shadow: 0px 0px 1px #000000; */
+           }
+           #nav-opts-home {
+               background-color: #bbbbbb;
+           }
+           #nav-opts-home:hover {
+               background-color: #9e9e9e;
+           }
+           .nav-a {
+               color: #000000;
+               display: block;
+               padding: 0px 14px;
+               text-align: center;
+               text-decoration: none;
+           }
+           .nav-text {
+               font-family: 'Roboto', sans-serif;
+           }
+           p {
+               font-family: 'Roboto', sans-serif;
+               text-align: left;
+               /* text-align: justify;
+               text-justify: inter-word; */
+           }
+           /* .p-a {
+               color: #1034a6;
+           }
+           .p-a:visited {
+               color: #800080;
+           } */
+           .text-header {
+               font-family: 'Roboto', sans-serif;
+               text-align: center;
+           }
+       </style>
+   </head>
+   <body>
+       <div>
+           <nav>
+               <ul id="navbar">
+                   <li class="nav-opts" id="nav-opts-home"><a class="nav-a" href="index.html"><p class="nav-text">Samar Dikshit</p></a></li>
+                   <li class="nav-opts"><a class="nav-a" href="exp.html"><p class="nav-text">Experience and Academics</p></a></li>
+                   <li class="nav-opts"><a class="nav-a" href="projects.html"><p class="nav-text">Projects</p></a></li>
+                   <li class="nav-opts" data-toggle="tooltip" data-placement="bottom" title="Last update: Sept. 2024"><a class="nav-a" href="resources/Samar Dikshit Resume.pdf" target="_blank" ><p class="nav-text">Resume</p></a></li>
+                   <li class="nav-opts"><a class="nav-a" href="photography.html"><p class="nav-text">Photography</p></a></li>
+                   <li id="nav-icons">
+                       <a class="nav-icons-a" href="https://www.linkedin.com/in/samar-dikshit/" target="_blank"><img src="resources/linkedin.png" class="header-img" alt="LinkedIn"></a>
+                       <a class="nav-icons-a" href="mailto:samard05@gmail.com?cc=dikshit.s@northeastern.edu&subject=[From website] "><img src="resources/gmail2.png" class="header-img" alt="Email me"></a>
+                       <a class="nav-icons-a" href="https://github.com/samar14641" target="_blank"><img src="resources/github.png" class="header-img" alt="GitHub"></a>
+                       <a class="nav-icons-a" href="https://www.instagram.com/samar14641/" target="_blank"><img src="resources/insta.png" class="header-img" alt="Instagram"></a>
+                   </li>
+               </ul>
+           </nav>
+       </div>
+       <div id="main-content">
+           <div id="empty-div" style="margin-top: 60px;"></div>
+           <div id="bio-div">
+               <div class="column">
+                   <img src="resources/me.jpg" id="face-img" alt="Samar">
+               </div>
+               <div class="column" id="bio-content">
+                   <h2 class="text-header">Samar Dikshit</h2>
+                   <p>
+                       <img src="resources/location.png" class="img-p" alt="Location:"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; New York City, NY
+                       <br><br>
+                       I am a Data Scientist at Meta on the Enterprise and Developer Marketing team, working on business messaging (WhatsApp Business and Click to Message Ads).
+                       <br><br>
+                       I was previously a Senior Data Scientist at Sonos working on the Product Data team, and graduated from Northeastern University's MS in Data Science program in December 2021. While at Northeatern University, I worked as a Research Assistant at the Center for Complex Network Research, and a Teaching Assistant for data science and CS classes.
+                       <!-- I was a Senior Data Scientist at Sonos working on the Product Data team, and graduated from Northeastern University's MS in Data Science program in December 2021. While at Northeatern University, I worked as a Research Assistant at the Center for Complex Network Research, and a Teaching Assistant for data science classes. -->
+                       <!-- <br><br>
+                       I previously worked as an Analytics Engineer at DTonomy Inc. I have previously also worked as an Research Assistant and Teaching Assistant at Northeastern University. -->
+                       <!-- <br><br>
+                       My areas of interest include data management and statistical analysis, network analysis, NLP, and the application of data science and machine learning to astronomy, IoT products, and sustainable transit.
+                       <br><br>
+                       Apart from these, my hobbies include photography, travelling as much as I can, and discovering blues, rock, and jazz music.  -->
+                   </p>
+               </div>
+           </div>
+       </div>
+   </body>
 </html>

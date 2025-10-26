@@ -1,412 +1,439 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>Samar Dikshit</title>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-        <link href="favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
-        <link href="favicon/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
-        <link href="favicon/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
-        <link href="favicon/site.webmanifest" rel="manifest">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        <style>
-            * {
-                box-sizing: border-box;
-            }
-            body {
-                margin: 0;
-            }
-            .column {
-                float: left;
-                width: 50%;
-                padding: 10px;
-            }
-            .header-img {
-                font-family: 'Roboto', sans-serif;
-                height: 30px;
-                margin-right: 5px;
-            }
-            img {
-                font-family: 'Roboto', sans-serif;
-            }
-            #main-content {
-                margin-top: 71.2px;
-            }
-            .main-sub-content {
-                margin-left: 10px;
-            }
-            .main-sub-content:after {
-                content: "";
-                display: block;
-                margin: 0 auto;
-                width: 95%;
-                padding-top: 10px;
-                border-bottom: 1px solid #000000;
-            }
-            #navbar {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-                position: fixed;
-                top: 0;
-                width: 100%;
-                overflow: hidden;
-                background-color: #f5f2f2;
-            }
-            #nav-icons {
-                float: right;
-                margin-top: 8px;
-            }
-            .nav-opts {
-                float: left;
-            }
-            .nav-opts:hover {
-                background-color: #9c9c9c;
-                /* font-weight increases button width, text-shadow looks bad*/
-                /* font-weight: bold; */
-                /* text-shadow: 0px 0px 1px #000000; */
-            }
-            #nav-opts-home {
-                background-color: #bbbbbb;
-            }
-            #nav-opts-home:hover {
-                background-color: #9e9e9e;
-            }
-            .nav-a {
-                color: #000000;
-                display: block;
-                padding: 0px 14px;
-                text-align: center;
-                text-decoration: none;
-            }
-            .nav-text {
-                font-family: 'Roboto', sans-serif;
-            }
-            p {
-                font-family: 'Roboto', sans-serif;
-                /* text-align: justify;
-                text-justify: inter-word; */
-            }
-            .p-a {
-                color: #1034a6;
-            }
-            .p-a:visited {
-                color: #800080;
-            }   
-            .row:after {
-                content: "";
-                display: table;
-                clear: both;
-            }
-            .text-data {
-                font-family: 'Roboto', sans-serif;
-                font-size: medium;
-            }
-            .text-header {
-                font-family: 'Roboto', sans-serif;
-                text-align: center;
-            }
-            .text-title {
-                font-family: 'Roboto', sans-serif;
-                font-size: larger;
-            }
-        </style>
-    </head>
-    <body>
-        <div>
-            <nav>
-                <ul id="navbar">
-                    <li class="nav-opts"><a class="nav-a" href="index.html"><p class="nav-text">Samar Dikshit</p></a></li>
-                    <li class="nav-opts" id="nav-opts-home"><a class="nav-a" href="exp.html"><p class="nav-text">Experience and Academics</p></a></li>
-                    <li class="nav-opts"><a class="nav-a" href="projects.html"><p class="nav-text">Projects</p></a></li>
-                    <li class="nav-opts" data-toggle="tooltip" data-placement="bottom" title="Last update: Sept. 2024"><a class="nav-a" href="resources/Samar Dikshit Resume.pdf" target="_blank" ><p class="nav-text">Resume</p></a></li>
-                    <li class="nav-opts"><a class="nav-a" href="photography.html"><p class="nav-text">Photography</p></a></li>
-                    <li id="nav-icons">
-                        <a class="nav-icons-a" href="https://www.linkedin.com/in/samar-dikshit/" target="_blank"><img src="resources/linkedin.png" class="header-img" alt="LinkedIn"></a>
-                        <a class="nav-icons-a" href="mailto:samard05@gmail.com?cc=dikshit.s@northeastern.edu&subject=[From website] "><img src="resources/gmail2.png" class="header-img" alt="Email me"></a>
-                        <a class="nav-icons-a" href="https://github.com/samar14641" target="_blank"><img src="resources/github.png" class="header-img" alt="GitHub"></a>
-                        <a class="nav-icons-a" href="https://www.instagram.com/samar14641/" target="_blank"><img src="resources/insta.png" class="header-img" alt="Instagram"></a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <div id="main-content">
-            <h2 class="text-header">Experience</h2>
-            <div class="main-sub-content" id="expr-div">
-                <div class="row">
-                    <div class="column">
-                        <p>
-                            <b class="text-title">Senior Data Scientist</b><br>
-                            <p>Product Data, Sonos Inc.<br>Boston, MA<br><small>October 2023 - Present</small></p>
-                            <ul class="text-data">
-                                <li>I led a cross-functional team with hardware and user interface designers focused on understanding user behavior, control patterns, and feature discoverability across speaker categories to drive decisions for new products and features e.g. headphone design, optimal button placement, Bluetooth availability, power/battery saver mode etc.</li>
-                                <li>I supported the development of Gaussian Process models in Python to automatically set speaker volumes, reducing volume change interactions for users by over 50%.</li>
-                                <li>I built a feature generation framework with dbt and Snowflake that creates 7-10 million rows of product usage-based feature values per day for use in downstream machine learning tasks.</li>
-                                <li>I contributed to the development of a Python-based machine learning pipeline to cluster and segment over 10 million users using k-means with over 80 features.</li>
-                            </ul>
-                            <b class="text-title">Data Scientist</b><br>
-                            <p>Product Data, Sonos Inc.<br>Boston, MA<br><small>January 2022 - September 2023</small></p>
-                            <ul class="text-data">
-                                <li>I developed SQL-based statistical and probabilistic methods to discover and predict usage routines for over 8 million users, and achieved R<sup>2</sup> values between 0.6 - 0.85, and productionized them using dbt.</li>
-                                <li>I built a proof-of-concept collaborative recommendation system using Python for Sonos Radio, a radio/music service with an average weekly user base of 1 million.</li>
-                                <li>I collaborated with the User Research team in designing and conducting user research studies to understand the effect of new software automations on user behavior, leading to the development of improved volume control and speech enhancement features.</li>
-                        </p>
-                    </div>
-                    <div class="column">
-                        <img src="resources/sonos.png" alt="Sonos" style="width: 150px; display: block; margin-left: auto; margin-right: auto;">
-                    </div>
-                </div>
-                <!-- <div class="row">
-                    <div class="column">
-                        <p>
-                            <b class="text-title">Data Scientist</b><br>
-                            Product Data, Sonos Inc.<br>Boston, MA<br><small>January 2022 - September 2023</small>
-                            <ul class="text-data">
-                                <li>A</li>
-                                <li>B</li>
-                                <li>C</li>
-                            </ul>
-                        </p>
-                    </div>
-                    <div class="column">
-                        <img src="resources/sonos.png" alt="Sonos" style="width: 150px; display: block; margin-left: auto; margin-right: auto;">
-                    </div>
-                </div> -->
-                <div class="row">
-                    <div class="column">
-                        <p>
-                            <b class="text-title">Teaching Assistant - DS3500 Advanced Programming with Data</b><br>
-                            Khoury College of Computer Sciences, Northeastern University<br>Boston, MA<br><small>September 2021 - December 2021</small>
-                            <ul class="text-data">
-                                <li>Instructors: <a class="p-a" href="https://www.ccs.neu.edu/home/rachlin/" target="_blank">John Rachlin</a></li>
-                                <li><a class="p-a" href="https://www.ccs.neu.edu/home/rachlin/python/ds3500/index.html" target="_blank">Course website</a></li>
-                                <li>I taught a class on APIs <a class="p-a", href="https://github.com/samar14641/api-ds3500", target="_blanks">(code and slides on GitHub)</a></li>
-                                <!-- <li>Office Hours: Tue 1500 - 1600, Thu 1000 - 1200, and Fri 1300 - 1500 Eastern on Zoom (link on Piazza)</li> -->
-                            </ul>
-                        </p>
-                    </div>
-                    <div class="column">
-                        <img src="resources/NEUCCIS.jpg" alt="NEU Monogram" style="width: 150px; display: block; margin-left: auto; margin-right: auto;">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="column">
-                        <p>
-                            <b class="text-title">Analytics Engineering Intern</b><br>
-                            DTonomy Inc.<br>Cambridge, MA<br><small>January 2021 - August 2021</small>
-                            <ul class="text-data">
-                                <li><a class="p-a" href="https://www.dtonomy.com/" target="_blank">DTonomy</a> is developing an AI-based SOAR platform to improve the efficiency of SOC teams</li>
-                                <li>Supervisor: Peter Luo, Co-Founder & CEO</li>
-                                <li>I analysed cyberattack data in Python based on the MITRE ATT&CK database, and developed patterns to identify and classify Defense Evasion and Lateral Movement attacks for the SOAR platform</li>
-                                <li>I created bots for Slack using Rasa 2 to use services like Google Analytics and AbuseIPDB</li>
-                                <li>I developed Node-RED automations to connect Elastic Security with the SOAR platform</li>
-                            </ul>
-                        </p>
-                    </div>
-                    <div class="column">
-                        <img src="resources/dtonomy.png" alt="DTonomy" style="width: 150px; display: block; margin-left: auto; margin-right: auto;">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="column">
-                        <p>
-                            <b class="text-title">Teaching Assistant - DS2000 Programming with Data</b><br>
-                            Khoury College of Computer Sciences, Northeastern University<br>Boston, MA<br><small>October 2020 - December 2020</small>
-                            <ul class="text-data">
-                                <li>Instructors: <a class="p-a" href="https://www.ccs.neu.edu/home/rachlin/" target="_blank">John Rachlin</a> and <a class="p-a" href="https://khoury.northeastern.edu/home/laney/" target="_blank">Laney Strange</a> (CS practicum)</li>
-                                <li><a class="p-a" href="https://www.ccs.neu.edu/home/rachlin/python/ds2000/" target="_blank">Course website</a></li>
-                                <li><a class="p-a" href="https://course.ccs.neu.edu/ds2001/cs/" target="_blank">Practicum website</a></li>
-                                <!-- <li>Office Hours: Mon and Fri 1600 - 1800 Eastern on Zoom (link on Piazza)</li> -->
-                            </ul>
-                        </p>
-                    </div>
-                    <div class="column">
-                        <img src="resources/NEUCCIS.jpg" alt="NEU Monogram" style="width: 150px; display: block; margin-left: auto; margin-right: auto;">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="column">
-                        <p>
-                            <b class="text-title">Research Assistant - Center for Complex Network Research</b><br>
-                            Network Science Institute, Northeastern University<br>Boston, MA<br><small>June 2020 - January 2021</small>
-                            <ul class="text-data">
-                                <li>Supervisor: <a class="p-a" href="https://www.barabasilab.com/people/louis-shekhtman" target="_blank">Louis Shekhtman</a></li>
-                                <li>I worked on the <a class="p-a" href="https://www.barabasilab.com/projects" target="_blank">Science of Success</a> project, focusing on network analysis related to philanthropies, non-profits, and universities to determine the factors that influence grants and donations</li>
-                                <li>I was responsible for collecting and processing data with over 1.5 million samples that could supplement data previously obtained from GuideStar</li>
-                                <li>After an exploratory analysis, I filtered and converted the collected data into a graph to study more than 97,000 relevant relationships between various philanthropies, non-profits, trustees and board members, universities, and other sociopolitical entities</li>
-                                <li>I worked on matching the names of organisations and people across the collected data and GuideStar using TfidfVectorizer, CountVectorizer, and pairwise kernels, thereby expanding the previous network</li>
-                                <li>I also worked on some more university-specific analyses to understand what kind of people make up museum and university boards, and what type of connections these people have</li>
-                                <li>The data I help collect and analyse was <a class="p-a" href="https://mobile.twitter.com/BarabasiLab/status/1579849749523357696" target="_blank">displayed</a> at the <a class="p-a" href="https://www.postmastersart.com/archive/barablab22/barablab22_direct.html" target="_blank">Postmasters Gallery</a> in New York City from September'22 - October'22</li>
-                            </ul>
-                        </p>
-                    </div>
-                    <div class="column">
-                        <img src="resources/netsci.png" alt="NEU NetSci" style="width: 170px; display: block; margin-left: auto; margin-right: auto;">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="column">
-                        <p>
-                            <b class="text-title">Teaching Assistant - CS3000 Algorithms and Data</b><br>
-                            Khoury College of Computer Sciences, Northeastern University<br>Boston, MA<br><small>May 2020 - June 2020</small>
-                            <ul class="text-data">
-                                <li>Instructor: <a class="p-a" href="https://tlarock.github.io/" target="_blank">Timothy LaRock</a></li>
-                                <li><a class="p-a" href="https://tlarock.github.io/teaching/cs3000/syllabus.html" target="_blank">Course website</a></li>
-                                <!-- <li>Office Hours: Wed 1500 - 1600 Eastern and Fri 1100 - 1200 Eastern on Zoom (link on Piazza)</li> -->
-                            </ul>
-                        </p>
-                    </div>
-                    <div class="column">
-                        <img src="resources/NEUCCIS.jpg" alt="NEU Monogram" style="width: 150px; display: block; margin-left: auto; margin-right: auto;">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="column">
-                        <p>
-                            <b class="text-title">Software Engineering Intern</b><br>
-                            Pepper Cloud<br>Bangalore, India<br><small>January 2019 - July 2019</small>
-                            <ul class="text-data">
-                                <li><a class="p-a" href="https://peppercloud.com/" target="_blank">Pepper Cloud</a> is building a smart CRM for B2B use by companies in various industries</li>
-                                <li>Supervisor: <a class="p-a" href="https://dsantani.github.io/" target="_blank">Darshan Santani</a>, Co-Founder & CTO</li>
-                                <li>I designed and built a chatbot for the CRM platform to automate non-trivial tasks and make the platform more user-friendly using Node.js and Dialogflow</li>
-                                <li>I worked on creating a tool for dynamic graphical visualisations of a client’s CRM data</li>
-                                <li>Read the <a class="p-a" href="resources/Pepper Cloud Report.pdf" target="_blank">report</a> or view the <a class="p-a" href="resources/Pepper Cloud PPT.pdf" target="_blank">presentation</a></li>
-                            </ul>
-                        </p>
-                    </div>
-                    <div class="column">
-                        <img src="resources/peppercloud.png" alt="Pepper Cloud logo" style="display: block; margin-left: auto; margin-right: auto;">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="column">
-                        <p>
-                            <b class="text-title">Software Development Intern</b><br>
-                            iEnabler<br>Bangalore, India<br><small>May 2018 - June 2018</small>
-                            <ul class="text-data">
-                                <li><a class="p-a" href="https://www.ienabler.co/" target="_blank">iEnabler</a> helps companies innvoate by helping them discover new products, generate IP, and grow revenue using their product discovery platform</li>
-                                <li>Supervisor: Sridhar DP, Co-Founder & CEO</li>
-                                <li>I developed a natural language processing system that automatically generates keywords, phrases, and tags from a client’s project data on the iEnabler Product Discovery Platform</li>
-                                <li>View a <a class="p-a" href="resources/iEnabler PPT.pdf" target="_blank">presentation</a> of the work done</li>
-                            </ul>
-                        </p>
-                    </div>
-                    <div class="column">
-                        <img src="resources/ienabler.png" alt="iEnabler logo" style="height: 230px; width: 230px; display: block; margin-left: auto; margin-right: auto;">
-                    </div>
-                </div>
-            </div>
-            <h2 class="text-header">Academics</h2>
-            <div class="main-sub-content" id="acad-div">
-                <div class="row">
-                    <div class="column">
-                        <p>
-                            <b class="text-title"><em>MS in Data Science, </em>Northeastern University</b><br>
-                            Khoury College of Computer Sciences<br>Boston, MA<br><small>September 2019 - December 2021</small>
-                            <ul class="text-data">
-                                <li>Fall'21: CS6120 Natural Language Processing, PHYS5116 Complex Networks and Applications</li>
-                                <li>Spring'21: Analytics Engineering co-op at DTonomy Inc.</li>
-                                <li>Fall'20: DS5220 Supervised Machine Learning</li>
-                                <li>Summer'20: DS5230 Unsupervised Machine Learning</li>
-                                <li>Spring'20: CS5800 Algorithms, CS6200 Information Retrieval</li>
-                                <li>Fall'19: DS5020 Linear Algebra and Probability, DS5110 Data Management and Processing</li>
-                            </ul>
-                        </p>
-                    </div>
-                    <div class="column">
-                        <img src="resources/NEUCCIS.jpg" alt="NEU Monogram" style="width: 150px; display: block; margin-left: auto; margin-right: auto;">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="column">
-                        <p>
-                            <b class="text-title"><em>BTech in Computer and Communication Engineering, </em>Manipal Institute of Technology</b><br>
-                            Department of Information and Communication Technology<br>Manipal, India<br><small>July 2015 - July 2019</small>
-                            <ul class="text-data">
-                                <li>Minor in Data Analytics</li>
-                                <li>Relevant courses: Big Data Analytics, Data Mining and Predictive Analytics, Pattern Recognition</li>
-                                <li><a class="p-a" href="resources/CCE Seminar.pdf" target="_blank">Seminar</a> (Aug'18): <em>Knowledge Transfer Through Machine Learning in Aircraft Design</em> based on <a class="p-a" href="https://ieeexplore.ieee.org/document/8065136" target="_blank">this paper</a></li>
-                            </ul>
-                        </p>
-                    </div>
-                    <div class="column">
-                        <img src="resources/manipal.png" alt="Manipal logo" style="height: 126px; display: block; margin-left: auto; margin-right: auto;">
-                    </div>
-                </div>
-            </div>
-            <h2 class="text-header">Certifications</h2>
-            <div class="main-sub-content" id="certi-div">
-                <div class="row">
-                    <div class="column">
-                        <p>
-                            <b class="text-title">Querying with Cypher in Neo4j 4.x</b><br>
-                            Neo4j GraphAcademy<br><small>Issued in May 2021</small>
-                            <ul class="text-data">
-                                <li>This course covered the use of Cypher to query the Neo4j DBMS</li>
-                                <li>Credential ID: <a class="p-a" href="resources/queryingWithCypherInNeo4j4x.pdf" target="_blank">1513461</a></li>
-                            </ul>
-                        </p>
-                    </div>
-                    <div class="column">
-                        <img src="resources/neo4j.png" alt="Neo4j logo" style="width: 145px;display: block; margin-left: auto; margin-right: auto;">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="column">
-                        <p>
-                            <b class="text-title">Bear Identification</b><br>
-                            Montana Fish, Wildlife & Parks<br><small>Issued in May 2020</small>
-                            <ul class="text-data">
-                                <li>This course covered bear Identification</li>
-                                <li>Credential ID: <a class="p-a" href="resources/BearIDCert.pdf" target="_blank">FT240943</a></li>
-                            </ul>
-                        </p>
-                    </div>
-                    <div class="column">
-                        <img src="resources/fwp-logo.svg" alt="MT FWP logo" style="width: 145px;display: block; margin-left: auto; margin-right: auto;">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="column">
-                        <p>
-                            <b class="text-title">Data-driven Astronomy</b><br>
-                            University of Sydney on Coursera<br><small>Issued in September 2018</small>
-                            <ul class="text-data">
-                                <li>
-                                    Each week of this course was split into two parts:
-                                    <ul>
-                                        <li>Studying various astronomy topics such as investigating exoplanets, star lifecycles, and detecting pulsars</li>
-                                        <li>Implementing various algorithms using Python 3 to perform analysis on data related to topics covered that week</li>
-                                    </ul>
-                                </li>
-                                <li>Credential ID: <a class="p-a" href="https://www.coursera.org/account/accomplishments/verify/DGHQHSXZEUN7" target="_blank">DGHQHSXZEUN7</a></li>
-                            </ul>
-                        </p>
-                    </div>
-                    <div class="column">
-                        <img src="resources/coursera.png" alt="Coursera logo" style="height: 145px; width: 145px; display: block; margin-left: auto; margin-right: auto;">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="column">
-                        <p>
-                            <b class="text-title">Introduction to Data Science in Python</b><br>
-                            University of Michigan on Coursera<br><small>Issued in August 2018</small>
-                            <ul class="text-data">
-                                <li>This course covered the use of Python 3 for data science using pandas and NumPy for data cleaning, manipulation, and statistical analysis</li>
-                                <li>Credential ID: <a class="p-a" href="https://www.coursera.org/account/accomplishments/verify/B4BF5DPRQKPF" target="_blank">B4BF5DPRQKPF</a></li>
-                            </ul>
-                        </p>
-                    </div>
-                    <div class="column">
-                        <!-- <img src="resources/umich.png" alt="UMich logo" style="height: 100px; width: 140px; display: block; margin-left: auto; margin-right: auto;"> -->
-                        <img src="resources/coursera.png" alt="Coursera logo" style="height: 145px; width: 145px; display: block; margin-left: auto; margin-right: auto;">
-                    </div>
-                </div>
-            </div>
-            <p style="margin-left: 10px; font-size: small;"><br><br><br>You can look at and download my resume by clicking on it at the nav bar at the top!</p>
-        </div>
-    </body>
+   <head>
+       <meta charset="utf-8">
+       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+       <title>Samar Dikshit</title>
+       <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+       <link href="favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+       <link href="favicon/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+       <link href="favicon/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+       <link href="favicon/site.webmanifest" rel="manifest">
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+       <style>
+           * {
+               box-sizing: border-box;
+           }
+           body {
+               margin: 0;
+           }
+           .column {
+               float: left;
+               width: 50%;
+               padding: 10px;
+           }
+           .header-img {
+               font-family: 'Roboto', sans-serif;
+               height: 30px;
+               margin-right: 5px;
+           }
+           img {
+               font-family: 'Roboto', sans-serif;
+           }
+           #main-content {
+               margin-top: 71.2px;
+           }
+           .main-sub-content {
+               margin-left: 10px;
+           }
+           .main-sub-content:after {
+               content: "";
+               display: block;
+               margin: 0 auto;
+               width: 95%;
+               padding-top: 10px;
+               border-bottom: 1px solid #000000;
+           }
+           #navbar {
+               list-style-type: none;
+               margin: 0;
+               padding: 0;
+               position: fixed;
+               top: 0;
+               width: 100%;
+               overflow: hidden;
+               background-color: #f5f2f2;
+           }
+           #nav-icons {
+               float: right;
+               margin-top: 8px;
+           }
+           .nav-opts {
+               float: left;
+           }
+           .nav-opts:hover {
+               background-color: #9c9c9c;
+               /* font-weight increases button width, text-shadow looks bad*/
+               /* font-weight: bold; */
+               /* text-shadow: 0px 0px 1px #000000; */
+           }
+           #nav-opts-home {
+               background-color: #bbbbbb;
+           }
+           #nav-opts-home:hover {
+               background-color: #9e9e9e;
+           }
+           .nav-a {
+               color: #000000;
+               display: block;
+               padding: 0px 14px;
+               text-align: center;
+               text-decoration: none;
+           }
+           .nav-text {
+               font-family: 'Roboto', sans-serif;
+           }
+           p {
+               font-family: 'Roboto', sans-serif;
+               /* text-align: justify;
+               text-justify: inter-word; */
+           }
+           .p-a {
+               color: #1034a6;
+           }
+           .p-a:visited {
+               color: #800080;
+           }  
+           .row:after {
+               content: "";
+               display: table;
+               clear: both;
+           }
+           .text-data {
+               font-family: 'Roboto', sans-serif;
+               font-size: medium;
+           }
+           .text-header {
+               font-family: 'Roboto', sans-serif;
+               text-align: center;
+           }
+           .text-title {
+               font-family: 'Roboto', sans-serif;
+               font-size: larger;
+           }
+       </style>
+   </head>
+   <body>
+       <div>
+           <nav>
+               <ul id="navbar">
+                   <li class="nav-opts"><a class="nav-a" href="index.html"><p class="nav-text">Samar Dikshit</p></a></li>
+                   <li class="nav-opts" id="nav-opts-home"><a class="nav-a" href="exp.html"><p class="nav-text">Experience and Academics</p></a></li>
+                   <li class="nav-opts"><a class="nav-a" href="projects.html"><p class="nav-text">Projects</p></a></li>
+                   <li class="nav-opts" data-toggle="tooltip" data-placement="bottom" title="Last update: Sept. 2024"><a class="nav-a" href="resources/Samar Dikshit Resume.pdf" target="_blank" ><p class="nav-text">Resume</p></a></li>
+                   <li class="nav-opts"><a class="nav-a" href="photography.html"><p class="nav-text">Photography</p></a></li>
+                   <li id="nav-icons">
+                       <a class="nav-icons-a" href="https://www.linkedin.com/in/samar-dikshit/" target="_blank"><img src="resources/linkedin.png" class="header-img" alt="LinkedIn"></a>
+                       <a class="nav-icons-a" href="mailto:samard05@gmail.com?cc=dikshit.s@northeastern.edu&subject=[From website] "><img src="resources/gmail2.png" class="header-img" alt="Email me"></a>
+                       <a class="nav-icons-a" href="https://github.com/samar14641" target="_blank"><img src="resources/github.png" class="header-img" alt="GitHub"></a>
+                       <a class="nav-icons-a" href="https://www.instagram.com/samar14641/" target="_blank"><img src="resources/insta.png" class="header-img" alt="Instagram"></a>
+                   </li>
+               </ul>
+           </nav>
+       </div>
+       <div id="main-content">
+           <h2 class="text-header">Experience</h2>
+           <div class="main-sub-content" id="expr-div">
+               <div class="row">
+                   <div class="column">
+                       <p>
+                           <b class="text-title">Data Scientist</b><br>
+                           <p>Enterprise and Developer Marketing, Meta Platforms Inc.<br>New York City, NY<br><small>April 2025 - Present</small></p>
+                           <ul class="text-data">
+                           </ul>
+                       </p>
+                   </div>
+                   <div class="column">
+                       <img src="resources/meta.png" alt="Sonos" style="width: 150px; display: block; margin-left: auto; margin-right: auto;">
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="column">
+                       <p>
+                           <b class="text-title">Senior Data Scientist</b><br>
+                           <p>Product Data, Sonos Inc.<br>Boston, MA<br><small>October 2023 - October 2024</small></p>
+                           <ul class="text-data">
+                               <li>I led a cross-functional team with hardware and user interface designers focused on understanding user behavior, control patterns, and feature discoverability across speaker categories to drive decisions for new products and features e.g. headphone design, optimal button placement, Bluetooth availability, power/battery saver mode etc.</li>
+                               <li>I supported the development of Gaussian Process models in Python to automatically set speaker volumes, reducing volume change interactions for users by over 50%.</li>
+                               <li>I built a feature generation framework with dbt and Snowflake that creates 7-10 million rows of product usage-based feature values per day for use in downstream machine learning tasks.</li>
+                               <li>I contributed to the development of a Python-based machine learning pipeline to cluster and segment over 10 million users using k-means with over 80 features.</li>
+                           </ul>
+                           <b class="text-title">Data Scientist</b><br>
+                           <p>Product Data, Sonos Inc.<br>Boston, MA<br><small>January 2022 - September 2023</small></p>
+                           <ul class="text-data">
+                               <li>I developed SQL-based statistical and probabilistic methods to discover and predict usage routines for over 8 million users, and achieved R<sup>2</sup> values between 0.6 - 0.85, and productionized them using dbt.</li>
+                               <li>I built a proof-of-concept collaborative recommendation system using Python for Sonos Radio, a radio/music service with an average weekly user base of 1 million.</li>
+                               <li>I collaborated with the User Research team in designing and conducting user research studies to understand the effect of new software automations on user behavior, leading to the development of improved volume control and speech enhancement features.</li>
+                       </p>
+                   </div>
+                   <div class="column">
+                       <img src="resources/sonos.png" alt="Sonos" style="width: 150px; display: block; margin-left: auto; margin-right: auto;">
+                   </div>
+               </div>
+               <!-- <div class="row">
+                   <div class="column">
+                       <p>
+                           <b class="text-title">Data Scientist</b><br>
+                           Product Data, Sonos Inc.<br>Boston, MA<br><small>January 2022 - September 2023</small>
+                           <ul class="text-data">
+                               <li>A</li>
+                               <li>B</li>
+                               <li>C</li>
+                           </ul>
+                       </p>
+                   </div>
+                   <div class="column">
+                       <img src="resources/sonos.png" alt="Sonos" style="width: 150px; display: block; margin-left: auto; margin-right: auto;">
+                   </div>
+               </div> -->
+               <div class="row">
+                   <div class="column">
+                       <p>
+                           <b class="text-title">Teaching Assistant - DS3500 Advanced Programming with Data</b><br>
+                           Khoury College of Computer Sciences, Northeastern University<br>Boston, MA<br><small>September 2021 - December 2021</small>
+                           <ul class="text-data">
+                               <li>Instructors: <a class="p-a" href="https://www.ccs.neu.edu/home/rachlin/" target="_blank">John Rachlin</a></li>
+                               <li><a class="p-a" href="https://www.ccs.neu.edu/home/rachlin/python/ds3500/index.html" target="_blank">Course website</a></li>
+                               <li>I taught a class on APIs <a class="p-a", href="https://github.com/samar14641/api-ds3500", target="_blanks">(code and slides on GitHub)</a></li>
+                               <!-- <li>Office Hours: Tue 1500 - 1600, Thu 1000 - 1200, and Fri 1300 - 1500 Eastern on Zoom (link on Piazza)</li> -->
+                           </ul>
+                       </p>
+                   </div>
+                   <div class="column">
+                       <img src="resources/NEUCCIS.jpg" alt="NEU Monogram" style="width: 150px; display: block; margin-left: auto; margin-right: auto;">
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="column">
+                       <p>
+                           <b class="text-title">Analytics Engineering Intern</b><br>
+                           DTonomy Inc.<br>Cambridge, MA<br><small>January 2021 - August 2021</small>
+                           <ul class="text-data">
+                               <li><a class="p-a" href="https://www.dtonomy.com/" target="_blank">DTonomy</a> is developing an AI-based SOAR platform to improve the efficiency of SOC teams</li>
+                               <li>Supervisor: Peter Luo, Co-Founder & CEO</li>
+                               <li>I analysed cyberattack data in Python based on the MITRE ATT&CK database, and developed patterns to identify and classify Defense Evasion and Lateral Movement attacks for the SOAR platform</li>
+                               <li>I created bots for Slack using Rasa 2 to use services like Google Analytics and AbuseIPDB</li>
+                               <li>I developed Node-RED automations to connect Elastic Security with the SOAR platform</li>
+                           </ul>
+                       </p>
+                   </div>
+                   <div class="column">
+                       <img src="resources/dtonomy.png" alt="DTonomy" style="width: 150px; display: block; margin-left: auto; margin-right: auto;">
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="column">
+                       <p>
+                           <b class="text-title">Teaching Assistant - DS2000 Programming with Data</b><br>
+                           Khoury College of Computer Sciences, Northeastern University<br>Boston, MA<br><small>October 2020 - December 2020</small>
+                           <ul class="text-data">
+                               <li>Instructors: <a class="p-a" href="https://www.ccs.neu.edu/home/rachlin/" target="_blank">John Rachlin</a> and <a class="p-a" href="https://khoury.northeastern.edu/home/laney/" target="_blank">Laney Strange</a> (CS practicum)</li>
+                               <li><a class="p-a" href="https://www.ccs.neu.edu/home/rachlin/python/ds2000/" target="_blank">Course website</a></li>
+                               <li><a class="p-a" href="https://course.ccs.neu.edu/ds2001/cs/" target="_blank">Practicum website</a></li>
+                               <!-- <li>Office Hours: Mon and Fri 1600 - 1800 Eastern on Zoom (link on Piazza)</li> -->
+                           </ul>
+                       </p>
+                   </div>
+                   <div class="column">
+                       <img src="resources/NEUCCIS.jpg" alt="NEU Monogram" style="width: 150px; display: block; margin-left: auto; margin-right: auto;">
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="column">
+                       <p>
+                           <b class="text-title">Research Assistant - Center for Complex Network Research</b><br>
+                           Network Science Institute, Northeastern University<br>Boston, MA<br><small>June 2020 - January 2021</small>
+                           <ul class="text-data">
+                               <li>Supervisor: <a class="p-a" href="https://www.barabasilab.com/people/louis-shekhtman" target="_blank">Louis Shekhtman</a></li>
+                               <li>I worked on the <a class="p-a" href="https://www.barabasilab.com/projects" target="_blank">Science of Success</a> project, focusing on network analysis related to philanthropies, non-profits, and universities to determine the factors that influence grants and donations</li>
+                               <li>I was responsible for collecting and processing data with over 1.5 million samples that could supplement data previously obtained from GuideStar</li>
+                               <li>After an exploratory analysis, I filtered and converted the collected data into a graph to study more than 97,000 relevant relationships between various philanthropies, non-profits, trustees and board members, universities, and other sociopolitical entities</li>
+                               <li>I worked on matching the names of organisations and people across the collected data and GuideStar using TfidfVectorizer, CountVectorizer, and pairwise kernels, thereby expanding the previous network</li>
+                               <li>I also worked on some more university-specific analyses to understand what kind of people make up museum and university boards, and what type of connections these people have</li>
+                               <li>The data I help collect and analyse was <a class="p-a" href="https://mobile.twitter.com/BarabasiLab/status/1579849749523357696" target="_blank">displayed</a> at the <a class="p-a" href="https://www.postmastersart.com/archive/barablab22/barablab22_direct.html" target="_blank">Postmasters Gallery</a> in New York City from September'22 - October'22</li>
+                           </ul>
+                       </p>
+                   </div>
+                   <div class="column">
+                       <img src="resources/netsci.png" alt="NEU NetSci" style="width: 170px; display: block; margin-left: auto; margin-right: auto;">
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="column">
+                       <p>
+                           <b class="text-title">Teaching Assistant - CS3000 Algorithms and Data</b><br>
+                           Khoury College of Computer Sciences, Northeastern University<br>Boston, MA<br><small>May 2020 - June 2020</small>
+                           <ul class="text-data">
+                               <li>Instructor: <a class="p-a" href="https://tlarock.github.io/" target="_blank">Timothy LaRock</a></li>
+                               <li><a class="p-a" href="https://tlarock.github.io/teaching/cs3000/syllabus.html" target="_blank">Course website</a></li>
+                               <!-- <li>Office Hours: Wed 1500 - 1600 Eastern and Fri 1100 - 1200 Eastern on Zoom (link on Piazza)</li> -->
+                           </ul>
+                       </p>
+                   </div>
+                   <div class="column">
+                       <img src="resources/NEUCCIS.jpg" alt="NEU Monogram" style="width: 150px; display: block; margin-left: auto; margin-right: auto;">
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="column">
+                       <p>
+                           <b class="text-title">Software Engineering Intern</b><br>
+                           Pepper Cloud<br>Bangalore, India<br><small>January 2019 - July 2019</small>
+                           <ul class="text-data">
+                               <li><a class="p-a" href="https://peppercloud.com/" target="_blank">Pepper Cloud</a> is building a smart CRM for B2B use by companies in various industries</li>
+                               <li>Supervisor: <a class="p-a" href="https://dsantani.github.io/" target="_blank">Darshan Santani</a>, Co-Founder & CTO</li>
+                               <li>I designed and built a chatbot for the CRM platform to automate non-trivial tasks and make the platform more user-friendly using Node.js and Dialogflow</li>
+                               <li>I worked on creating a tool for dynamic graphical visualisations of a client’s CRM data</li>
+                               <li>Read the <a class="p-a" href="resources/Pepper Cloud Report.pdf" target="_blank">report</a> or view the <a class="p-a" href="resources/Pepper Cloud PPT.pdf" target="_blank">presentation</a></li>
+                           </ul>
+                       </p>
+                   </div>
+                   <div class="column">
+                       <img src="resources/peppercloud.png" alt="Pepper Cloud logo" style="display: block; margin-left: auto; margin-right: auto;">
+                   </div>
+                 </div>
+                 <div class="row">
+                   <div class="column">
+                       <p>
+                           <b class="text-title">Software Development Intern</b><br>
+                           iEnabler<br>Bangalore, India<br><small>May 2018 - June 2018</small>
+                           <ul class="text-data">
+                               <li><a class="p-a" href="https://www.ienabler.co/" target="_blank">iEnabler</a> helps companies innvoate by helping them discover new products, generate IP, and grow revenue using their product discovery platform</li>
+                               <li>Supervisor: Sridhar DP, Co-Founder & CEO</li>
+                               <li>I developed a natural language processing system that automatically generates keywords, phrases, and tags from a client’s project data on the iEnabler Product Discovery Platform</li>
+                               <li>View a <a class="p-a" href="resources/iEnabler PPT.pdf" target="_blank">presentation</a> of the work done</li>
+                           </ul>
+                       </p>
+                   </div>
+                   <div class="column">
+                       <img src="resources/ienabler.png" alt="iEnabler logo" style="height: 230px; width: 230px; display: block; margin-left: auto; margin-right: auto;">
+                   </div>
+               </div>
+           </div>
+           <h2 class="text-header">Academics</h2>
+           <div class="main-sub-content" id="acad-div">
+               <div class="row">
+                   <div class="column">
+                       <p>
+                           <b class="text-title"><em>MS in Data Science, </em>Northeastern University</b><br>
+                           Khoury College of Computer Sciences<br>Boston, MA<br><small>September 2019 - December 2021</small>
+                           <ul class="text-data">
+                               <li>Fall'21: CS6120 Natural Language Processing, PHYS5116 Complex Networks and Applications</li>
+                               <li>Spring'21: Analytics Engineering co-op at DTonomy Inc.</li>
+                               <li>Fall'20: DS5220 Supervised Machine Learning</li>
+                               <li>Summer'20: DS5230 Unsupervised Machine Learning</li>
+                               <li>Spring'20: CS5800 Algorithms, CS6200 Information Retrieval</li>
+                               <li>Fall'19: DS5020 Linear Algebra and Probability, DS5110 Data Management and Processing</li>
+                           </ul>
+                       </p>
+                   </div>
+                   <div class="column">
+                       <img src="resources/NEUCCIS.jpg" alt="NEU Monogram" style="width: 150px; display: block; margin-left: auto; margin-right: auto;">
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="column">
+                       <p>
+                           <b class="text-title"><em>BTech in Computer and Communication Engineering, </em>Manipal Institute of Technology</b><br>
+                           Department of Information and Communication Technology<br>Manipal, India<br><small>July 2015 - July 2019</small>
+                           <ul class="text-data">
+                               <li>Minor in Data Analytics</li>
+                               <li>Relevant courses: Big Data Analytics, Data Mining and Predictive Analytics, Pattern Recognition</li>
+                               <li><a class="p-a" href="resources/CCE Seminar.pdf" target="_blank">Seminar</a> (Aug'18): <em>Knowledge Transfer Through Machine Learning in Aircraft Design</em> based on <a class="p-a" href="https://ieeexplore.ieee.org/document/8065136" target="_blank">this paper</a></li>
+                           </ul>
+                       </p>
+                   </div>
+                   <div class="column">
+                       <img src="resources/manipal.png" alt="Manipal logo" style="height: 126px; display: block; margin-left: auto; margin-right: auto;">
+                   </div>
+               </div>
+           </div>
+           <h2 class="text-header">Certifications</h2>
+           <div class="main-sub-content" id="certi-div">
+               <div class="row">
+                   <div class="column">
+                       <p>
+                           <b class="text-title">SSI Open Water Diver</b><br>
+                           Scuba Schools International<br><small>Issued in February 2025</small>
+                           <ul class="text-data">
+                               <li>Credential ID: 791009Y7395101790542-IN</a></li>
+                           </ul>
+                       </p>
+                   </div>
+                   <div class="column">
+                       <img src="resources/SSI.png" alt="SSI logo" style="width: 145px;display: block; margin-left: auto; margin-right: auto;">
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="column">
+                       <p>
+                           <b class="text-title">Querying with Cypher in Neo4j 4.x</b><br>
+                           Neo4j GraphAcademy<br><small>Issued in May 2021</small>
+                           <ul class="text-data">
+                               <li>This course covered the use of Cypher to query the Neo4j DBMS</li>
+                               <li>Credential ID: <a class="p-a" href="resources/queryingWithCypherInNeo4j4x.pdf" target="_blank">1513461</a></li>
+                           </ul>
+                       </p>
+                   </div>
+                   <div class="column">
+                       <img src="resources/neo4j.png" alt="Neo4j logo" style="width: 145px;display: block; margin-left: auto; margin-right: auto;">
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="column">
+                       <p>
+                           <b class="text-title">Bear Identification</b><br>
+                           Montana Fish, Wildlife & Parks<br><small>Issued in May 2020</small>
+                           <ul class="text-data">
+                               <li>This course covered bear Identification</li>
+                               <li>Credential ID: <a class="p-a" href="resources/BearIDCert.pdf" target="_blank">FT240943</a></li>
+                           </ul>
+                       </p>
+                   </div>
+                   <div class="column">
+                       <img src="resources/fwp-logo.svg" alt="MT FWP logo" style="width: 145px;display: block; margin-left: auto; margin-right: auto;">
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="column">
+                       <p>
+                           <b class="text-title">Data-driven Astronomy</b><br>
+                           University of Sydney on Coursera<br><small>Issued in September 2018</small>
+                           <ul class="text-data">
+                               <li>
+                                   Each week of this course was split into two parts:
+                                   <ul>
+                                       <li>Studying various astronomy topics such as investigating exoplanets, star lifecycles, and detecting pulsars</li>
+                                       <li>Implementing various algorithms using Python 3 to perform analysis on data related to topics covered that week</li>
+                                   </ul>
+                               </li>
+                               <li>Credential ID: <a class="p-a" href="https://www.coursera.org/account/accomplishments/verify/DGHQHSXZEUN7" target="_blank">DGHQHSXZEUN7</a></li>
+                           </ul>
+                       </p>
+                   </div>
+                   <div class="column">
+                       <img src="resources/coursera.png" alt="Coursera logo" style="height: 145px; width: 145px; display: block; margin-left: auto; margin-right: auto;">
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="column">
+                       <p>
+                           <b class="text-title">Introduction to Data Science in Python</b><br>
+                           University of Michigan on Coursera<br><small>Issued in August 2018</small>
+                           <ul class="text-data">
+                               <li>This course covered the use of Python 3 for data science using pandas and NumPy for data cleaning, manipulation, and statistical analysis</li>
+                               <li>Credential ID: <a class="p-a" href="https://www.coursera.org/account/accomplishments/verify/B4BF5DPRQKPF" target="_blank">B4BF5DPRQKPF</a></li>
+                           </ul>
+                       </p>
+                   </div>
+                   <div class="column">
+                       <!-- <img src="resources/umich.png" alt="UMich logo" style="height: 100px; width: 140px; display: block; margin-left: auto; margin-right: auto;"> -->
+                       <img src="resources/coursera.png" alt="Coursera logo" style="height: 145px; width: 145px; display: block; margin-left: auto; margin-right: auto;">
+                   </div>
+               </div>
+           </div>
+           <p style="margin-left: 10px; font-size: small;"><br><br><br>You can look at and download my resume by clicking on it at the nav bar at the top!</p>
+       </div>
+   </body>
 </html>
