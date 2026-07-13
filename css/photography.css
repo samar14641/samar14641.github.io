@@ -142,6 +142,45 @@ body {
     background-color: var(--md-primary);
 }
 
+/* Tag filters: buttons are generated in js/photography.js, one per
+   distinct data-tags value across .photo-item elements, all active
+   by default. Toggling a tag re-filters the grid below (a photo
+   stays visible if it has at least one active tag); hidden items
+   are set to display:none via inline style, which CSS Grid simply
+   skips, so remaining photos reflow with no gaps left behind. */
+
+.tag-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    max-width: 950px;
+    margin: 0 auto 16px;
+    padding: 0 16px;
+}
+
+.tag-btn {
+    padding: 6px 14px;
+    border-radius: 16px;
+    border: 1px solid var(--md-outline);
+    background-color: transparent;
+    color: var(--md-on-surface-variant);
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.tag-btn:hover {
+    border-color: var(--md-primary);
+}
+
+.tag-btn.active {
+    background-color: var(--md-primary-container);
+    border-color: var(--md-primary-container);
+    color: var(--md-on-primary-container);
+}
+
 /* Photo grid: 4 rows x 2 cols. Cells use a mix of the aspect
    ratios actually seen across old_photography.html's photos
    (square Instagram-style crops and 3:2 stills) so the grid can
@@ -200,6 +239,11 @@ body {
     .carousel-arrow {
         padding: 4px;
         font-size: 18px;
+    }
+
+    .tag-btn {
+        padding: 5px 11px;
+        font-size: 12px;
     }
 
     .photo-grid {

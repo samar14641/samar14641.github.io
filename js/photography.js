@@ -59,4 +59,92 @@ document.addEventListener('DOMContentLoaded', function () {
 
     show(0);
     scheduleAutoAdvance();
+
+    initTagFilters();
 });
+
+function initTagFilters() {
+    var filterContainer = document.querySelector('.tag-filters');
+    var items = document.querySelectorAll('.photo-item[data-tags]');
+
+    if (!filterContainer || !items.length) {
+        return;
+    }
+
+    function tagsOf(item) {
+        return item.getAttribute('data-tags').split(',').map(function (tag) {
+            return tag.trim();
+        }).filter(Boolean);
+    }
+
+    var allTags = [];
+    items.forEach(function (item) {
+        tagsOf(item).forEach(function (tag) {
+            if (allTags.indexOf(tag) === -1) {
+                allTags.push(tag);
+            }
+        });
+    });
+
+    var activeTags = allTags.slice();
+    var tagButtons = [];
+
+    function applyFilter() {
+        items.forEach(function (item) {
+            var visible = tagsOf(item).some(function (tag) {
+                return activeTags.indexOf(tag) !== -1;
+            });
+            item.style.display = visible ? '' : 'none';
+        });
+
+        var allActive = activeTags.length === allTags.length;
+        allBtn.classList.toggle('active', allActive);
+        allBtn.setAttribute('aria-pressed', allActive ? 'true' : 'false');
+    }
+
+    var allBtn = document.createElement('button');
+    allBtn.type = 'button';
+    allBtn.className = 'tag-btn active';
+    allBtn.textContent = 'All';
+    allBtn.setAttribute('aria-pressed', 'true');
+
+    allBtn.addEventListener('click', function () {
+        var turningOn = activeTags.length !== allTags.length;
+        activeTags = turningOn ? allTags.slice() : [];
+
+        tagButtons.forEach(function (btn) {
+            btn.classList.toggle('active', turningOn);
+            btn.setAttribute('aria-pressed', turningOn ? 'true' : 'false');
+        });
+
+        applyFilter();
+    });
+
+    filterContainer.appendChild(allBtn);
+
+    allTags.forEach(function (tag) {
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'tag-btn active';
+        btn.textContent = tag;
+        btn.setAttribute('aria-pressed', 'true');
+
+        btn.addEventListener('click', function () {
+            var index = activeTags.indexOf(tag);
+            var isActive = index === -1;
+
+            if (isActive) {
+                activeTags.push(tag);
+            } else {
+                activeTags.splice(index, 1);
+            }
+
+            btn.classList.toggle('active', isActive);
+            btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+            applyFilter();
+        });
+
+        tagButtons.push(btn);
+        filterContainer.appendChild(btn);
+    });
+}
