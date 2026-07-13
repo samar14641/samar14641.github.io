@@ -1,0 +1,313 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    /* --nav-height (and this padding-top) only update once the mobile
+       nav's own open/close animation finishes (see js/main.js), so this
+       needs its own transition or the content reflow would snap instead
+       of easing in step with the nav. */
+    transition: padding-top 0.25s ease;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+}
+
+.text-header {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.p-a {
+    color: #1034a6;
+}
+
+.p-a:visited {
+    color: #800080;
+}
+
+/* Navbar */
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    z-index: 1000;
+    background-color: #f5f2f2;
+}
+
+.nav-opts {
+    float: left;
+}
+
+.nav-opts:hover {
+    background-color: #9c9c9c;
+}
+
+#nav-opts-home {
+    background-color: #bbbbbb;
+}
+
+#nav-opts-home:hover {
+    background-color: #9e9e9e;
+}
+
+.nav-a {
+    color: #000000;
+    display: block;
+    padding: 14px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav-text {
+    font-family: 'Roboto', sans-serif;
+}
+
+#nav-icons {
+    float: right;
+    margin-top: 8px;
+}
+
+.header-img {
+    font-family: 'Roboto', sans-serif;
+    height: 30px;
+    margin-right: 5px;
+}
+
+/* Hamburger toggle: hidden until the horizontal nav no longer fits
+   on one row (see the "nav collapse" media query below) and the
+   item list collapses into a dropdown instead. */
+
+.nav-toggle {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1100;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 52px;
+    height: 48.6px;
+    padding: 0;
+    background-color: #f5f2f2;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #000000;
+}
+
+/* Bio section (index.html) */
+
+#empty-div {
+    margin-top: 60px;
+}
+
+#bio-div {
+    margin: 0 auto;
+    width: 65%;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+}
+
+#face-img {
+    border-radius: 50%;
+    margin-top: 80px;
+    width: 220px;
+}
+
+.img-p {
+    position: absolute;
+    width: 20px;
+}
+
+#bio-content:after {
+    content: attr(data-updated-label);
+    font-family: 'Roboto', sans-serif;
+    font-size: xx-small;
+    text-align: right;
+    display: block;
+    margin: 0 auto;
+    width: 95%;
+    padding-top: 10px;
+    border-bottom: 1px solid #000000;
+}
+
+/* ---------------------------------------------------------------
+   Sub-page content (exp.html, projects.html)
+   --------------------------------------------------------------- */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.text-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: larger;
+}
+
+.text-data,
+.text-data ul {
+    font-family: 'Roboto', sans-serif;
+    font-size: medium;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.entry-logo {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    max-width: 100%;
+    height: auto;
+}
+
+.entry-logo--lg {
+    width: 170px;
+}
+
+.entry-logo--xl {
+    width: 230px;
+}
+
+.footnote {
+    margin-left: 10px;
+    font-size: small;
+}
+
+/* Only the Experience / Academics / Certifications sections get a
+   divider, drawn once after the whole group, not per entry. */
+
+.main-sub-content {
+    margin-left: 10px;
+}
+
+.main-sub-content:after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 95%;
+    padding-top: 10px;
+    border-bottom: 1px solid #000000;
+}
+
+/* Projects listing */
+
+#proj-div {
+    margin-bottom: 10px;
+    margin-left: 10px;
+    width: 75%;
+}
+
+#proj-div p,
+#proj-div ul {
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.proj-content:after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 95%;
+    padding-top: 10px;
+    border-bottom: 1px solid #000000;
+}
+
+/* ---------------------------------------------------------------
+   Nav collapse: below this width the floated nav items no longer
+   fit on one row (they'd otherwise float-wrap or, previously, get
+   stacked full-width and eat half the screen). Swap to a hamburger
+   toggle that reveals the list as a dropdown instead.
+   --------------------------------------------------------------- */
+
+@media (max-width: 800px) {
+    .nav-toggle {
+        display: flex;
+    }
+
+    /* Dock the dropdown below the toggle's own row (instead of both
+       starting at top:0) so the always-visible toggle button never
+       overlaps/intercepts taps on the first item of the open list. */
+    #navbar {
+        top: 48.6px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.25s ease;
+    }
+
+    #navbar.nav-open {
+        max-height: 640px;
+        overflow-y: auto;
+    }
+
+    .nav-opts,
+    #nav-icons {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* ---------------------------------------------------------------
+   Mobile: the float/fixed-width layout above overflows and clips
+   on narrow screens, so collapse it to a single stacked column.
+   --------------------------------------------------------------- */
+
+@media (max-width: 640px) {
+    #bio-div {
+        width: 92%;
+    }
+
+    .column {
+        float: none;
+        width: 100%;
+    }
+
+    #face-img {
+        margin-top: 20px;
+        width: 160px;
+        max-width: 60%;
+    }
+
+    #bio-content:after {
+        text-align: center;
+    }
+
+    .main-sub-content {
+        margin-left: 0;
+    }
+
+    #proj-div {
+        width: 92%;
+        margin-left: 0;
+    }
+
+    #proj-div p,
+    #proj-div ul {
+        text-align: left;
+    }
+}

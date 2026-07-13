@@ -1,0 +1,267 @@
+/* ---------------------------------------------------------------
+   exp.html only.
+   Layered on top of main.css: reuses the shared reset, fonts,
+   nav, .p-a link colors, .text-header, .text-title, and
+   .text-data rules, and only adds the new layout pieces
+   (tab bar, timeline, certification grid).
+   --------------------------------------------------------------- */
+
+:root {
+    --exp-line: #dddddd;
+    --exp-border: #e5e5e5;
+    --exp-meta: #555555;
+}
+
+/* Mini nav: tab bar that swaps which section is shown, instead of
+   one long scrolling page. js/exp.js toggles [hidden] on the
+   matching .exp-panel and .active on the matching .exp-tab.
+   The bar itself is frozen just below the main site nav (using
+   --nav-height, set by js/main.js) so it stays reachable while a
+   long panel (e.g. Experience) is scrolled. --tabs-height is the
+   bar's own rendered height, set by js/exp.js, so .exp-panel
+   can reserve exactly enough space to clear it. */
+
+.exp-tabs {
+    position: fixed;
+    top: var(--nav-height, 60px);
+    left: 0;
+    width: 100%;
+    z-index: 500;
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    padding: 0 16px;
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--exp-border);
+    /* --nav-height only updates once the mobile nav's own open/close
+       animation finishes (see js/main.js), so without its own transition
+       this bar would jump to its new position in a single frame instead
+       of easing along with the nav. */
+    transition: top 0.25s ease;
+}
+
+.exp-tab {
+    display: flex;
+    align-items: center;
+    min-height: 48.6px;
+    padding: 0 26px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: var(--exp-meta);
+    cursor: pointer;
+}
+
+.exp-tab:hover {
+    color: #000000;
+}
+
+.exp-tab.active {
+    color: #000000;
+    font-weight: bold;
+    border-bottom-color: #000000;
+}
+
+.exp-panel {
+    margin-top: calc(var(--tabs-height, 54px) + 20px);
+}
+
+/* Timeline (Experience / Academics) */
+
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 10px auto 40px;
+    padding: 4px 16px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 51px;
+    width: 2px;
+    background-color: var(--exp-line);
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 96px;
+    margin-bottom: 28px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-marker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid var(--exp-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.timeline-marker img {
+    max-width: 68%;
+    max-height: 68%;
+    object-fit: contain;
+}
+
+.timeline-content {
+    padding-top: 2px;
+}
+
+.timeline-role + .timeline-role {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--exp-border);
+}
+
+.timeline-role-head {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    column-gap: 12px;
+}
+
+.timeline-date {
+    margin-left: auto;
+    white-space: nowrap;
+    color: var(--exp-meta);
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+}
+
+.timeline-content .text-title {
+    display: block;
+    margin: 0 0 2px;
+    font-weight: bold;
+}
+
+.timeline-org {
+    margin: 0 0 10px;
+    color: var(--exp-meta);
+    font-family: 'Roboto', sans-serif;
+    font-size: medium;
+}
+
+/* Certifications grid */
+
+.cert-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    max-width: 900px;
+    margin: 10px auto 40px;
+    padding: 0 16px;
+}
+
+.cert-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 0 1 270px;
+    border: 1px solid var(--exp-border);
+    border-radius: 8px;
+    padding: 14px 16px;
+}
+
+.cert-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.cert-logo {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.cert-body {
+    min-width: 0;
+}
+
+.cert-body .text-title {
+    display: block;
+    margin: 0 0 2px;
+    font-weight: bold;
+    line-height: 1.25;
+    min-height: 2.5em;
+}
+
+.cert-org,
+.cert-date {
+    margin: 0 0 6px;
+    color: var(--exp-meta);
+    font-family: 'Roboto', sans-serif;
+    font-size: small;
+}
+
+.cert-credential {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    text-align: left;
+}
+
+.cert-credential li {
+    overflow-wrap: break-word;
+}
+
+@media (max-width: 640px) {
+    .exp-tabs {
+        gap: 2px;
+        padding: 0 8px;
+    }
+
+    .exp-tab {
+        padding: 0 10px;
+        font-size: 16px;
+    }
+
+    .timeline::before {
+        left: 43px;
+    }
+
+    .timeline-item {
+        padding-left: 72px;
+    }
+
+    .timeline-marker {
+        width: 56px;
+        height: 56px;
+    }
+
+    .timeline-date {
+        margin-left: 0;
+    }
+
+    .cert-card {
+        flex: 1 1 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cert-head {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cert-credential {
+        text-align: center;
+    }
+}

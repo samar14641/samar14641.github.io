@@ -1,0 +1,321 @@
+/* ---------------------------------------------------------------
+   photography.html only.
+   Layered on top of main.css: reuses the shared reset, fonts,
+   nav, and .text-header rules, overriding the light nav/body
+   colors with the Material Design 3 "baseline" dark color scheme
+   (m3.material.io/styles/color/static/baseline), and adds the new
+   layout pieces (carousel, placeholder grid).
+   --------------------------------------------------------------- */
+
+:root {
+    --md-background: #1c1b1f;
+    --md-nav-background: #121212;
+    --md-on-background: #e6e1e5;
+    --md-surface-variant: #49454f;
+    --md-on-surface-variant: #cac4d0;
+    --md-outline: #938f99;
+    --md-primary: #d0bcff;
+    --md-primary-container: #4f378b;
+    --md-on-primary-container: #eaddff;
+    --md-secondary-container: #4a4458;
+}
+
+/* Dark theme: override main.css's light nav/body rules */
+
+body {
+    background-color: var(--md-background);
+    color: var(--md-on-background);
+}
+
+#navbar {
+    background-color: var(--md-nav-background);
+}
+
+.nav-a {
+    color: var(--md-on-background);
+}
+
+.nav-opts:hover {
+    background-color: var(--md-secondary-container);
+}
+
+#nav-opts-home {
+    background-color: var(--md-primary-container);
+}
+
+#nav-opts-home:hover {
+    background-color: var(--md-primary-container);
+    opacity: 0.85;
+}
+
+.nav-toggle {
+    background-color: var(--md-nav-background);
+}
+
+.nav-toggle span {
+    background-color: var(--md-on-background);
+}
+
+#main-content {
+    padding-top: 20px;
+}
+
+/* Carousel */
+
+.carousel {
+    max-width: 800px;
+    margin: 10px auto 40px;
+    padding: 0 16px;
+}
+
+.carousel-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.carousel-track {
+    position: relative;
+    flex: 1 1 auto;
+    min-width: 0;
+    aspect-ratio: 3 / 2;
+    background-color: #000000;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.carousel-slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-slide.active {
+    display: block;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-arrow {
+    flex: 0 0 auto;
+    background: none;
+    border: none;
+    padding: 6px;
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--md-on-background);
+    cursor: pointer;
+    user-select: none;
+}
+
+.carousel-arrow:hover {
+    color: var(--md-primary);
+}
+
+.carousel-caption {
+    margin: 12px 0 0;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: var(--md-on-surface-variant);
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.carousel-dot {
+    width: 14px;
+    height: 14px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--md-surface-variant);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.carousel-dot:hover {
+    background-color: var(--md-outline);
+}
+
+.carousel-dot.active {
+    background-color: var(--md-primary);
+}
+
+/* Tag filters: buttons are generated in js/photography.js, one per
+   distinct data-tags value across .photo-item elements, all active
+   by default. Toggling a tag re-filters the grid below (a photo
+   stays visible if it has at least one active tag); hidden items
+   are set to display:none via inline style, which CSS Grid simply
+   skips, so remaining photos reflow with no gaps left behind. */
+
+.tag-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    max-width: 950px;
+    margin: 0 auto 16px;
+    padding: 0 16px;
+}
+
+.tag-btn {
+    padding: 6px 14px;
+    border-radius: 16px;
+    border: 1px solid var(--md-outline);
+    background-color: transparent;
+    color: var(--md-on-surface-variant);
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.tag-btn:hover {
+    border-color: var(--md-primary);
+}
+
+.tag-btn.active {
+    background-color: var(--md-primary-container);
+    border-color: var(--md-primary-container);
+    color: var(--md-on-primary-container);
+}
+
+/* Photo grid: 4 rows x 2 cols. Cells use a mix of the aspect
+   ratios actually seen across old_photography.html's photos
+   (square Instagram-style crops and 3:2 stills) so the grid can
+   hold photos of varying shapes without forcing every photo into
+   the same box. Cells without a photo yet just show their label. */
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+    gap: 12px;
+    max-width: 950px; /* change this to adjust img size*/
+    margin: 10px auto 40px;
+    padding: 0 16px;
+}
+
+.photo-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--md-surface-variant);
+    border-radius: 6px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    color: var(--md-on-surface-variant);
+}
+
+.photo-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/* Lightbox: clicking a grid photo expands it full-size over a dim
+   scrim. js/photography.js swaps lightbox-img's src/alt and toggles
+   the [hidden] attribute; closes via the X button, clicking the
+   scrim itself (not the image), or Escape. */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 60px 20px;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.lightbox[hidden] {
+    display: none;
+}
+
+.lightbox-img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.lightbox-caption {
+    margin: 0;
+    max-width: 90%;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: var(--md-on-background);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: none;
+    border: none;
+    padding: 8px;
+    font-size: 32px;
+    line-height: 1;
+    color: var(--md-on-background);
+    cursor: pointer;
+}
+
+.lightbox-close:hover {
+    color: var(--md-primary);
+}
+
+.ratio-1-1 {
+    aspect-ratio: 1 / 1;
+}
+
+.ratio-3-2 {
+    aspect-ratio: 3 / 2;
+}
+
+/* .ratio-4-3 (aspect-ratio: 4 / 3) and .ratio-16-9 (aspect-ratio: 16 / 9)
+   were trimmed: every photo in resources/pics_jpg is currently 1:1 or 3:2.
+   Re-add them here (and back in photography.html's placeholder classes)
+   if a future photo needs one of those shapes. */
+
+@media (max-width: 640px) {
+    .carousel-track {
+        aspect-ratio: 4 / 3;
+        border-radius: 4px;
+    }
+
+    .carousel-arrow {
+        padding: 4px;
+        font-size: 18px;
+    }
+
+    .tag-btn {
+        padding: 5px 11px;
+        font-size: 12px;
+    }
+
+    .photo-grid {
+        gap: 8px;
+        padding: 0 10px;
+    }
+
+    .photo-item {
+        font-size: 11px;
+    }
+}
