@@ -1,287 +1,201 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>Samar Dikshit</title>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-        <link href="favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
-        <link href="favicon/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
-        <link href="favicon/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
-        <link href="favicon/site.webmanifest" rel="manifest">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        <style>
-            body {
-                margin: 0;
-            }
-            .header-img {
-                font-family: 'Roboto', sans-serif;
-                height: 30px;
-                margin-right: 5px;
-            }
-            #main-content {
-                margin-top: 71.2px;
-            }
-            #navbar {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-                position: fixed;
-                top: 0;
-                width: 100%;
-                overflow: hidden;
-                background-color: #f5f2f2;
-            }
-            #nav-icons {
-                float: right;
-                margin-top: 8px;
-            }
-            .nav-opts {
-                float: left;
-            }
-            .nav-opts:hover {
-                background-color: #9c9c9c;
-                /* font-weight increases button width, text-shadow looks bad*/
-                /* font-weight: bold; */
-                /* text-shadow: 0px 0px 1px #000000; */
-            }
-            #nav-opts-home {
-                background-color: #bbbbbb;
-            }
-            #nav-opts-home:hover {
-                background-color: #9e9e9e;
-            }
-            .nav-a {
-                color: #000000;
-                display: block;
-                padding: 0px 14px;
-                text-align: center;
-                text-decoration: none;
-            }
-            .nav-text {
-                font-family: 'Roboto', sans-serif;
-            }
-            p {
-                font-family: 'Roboto', sans-serif;
-                text-align: justify;
-                text-justify: inter-word;
-            }
-            .p-a {
-                color: #1034a6;
-            }
-            .p-a:visited {
-                color: #800080;
-            }
-            .proj-content:after {
-                content: "";
-                display: block;
-                margin: 0 auto;
-                width: 95%;
-                padding-top: 10px;
-                border-bottom: 1px solid #000000;
-            }
-            #proj-div {
-                margin-bottom: 10px;
-                margin-left: 10px;
-                width: 75%;
-            }
-            .text-header {
-                font-family: 'Roboto', sans-serif;
-                text-align: center;
-            }
-            ul {
-                font-family: 'Roboto', sans-serif;
-                text-align: justify;
-                text-justify: inter-word;
-            }
-        </style>
-    </head>
-    <body>
-        <div>
-            <nav>
-                <ul id="navbar">
-                    <li class="nav-opts"><a class="nav-a" href="index.html"><p class="nav-text">Samar Dikshit</p></a></li>
-                    <li class="nav-opts"><a class="nav-a" href="exp.html"><p class="nav-text">Experience and Academics</p></a></li>
-                    <li class="nav-opts" id="nav-opts-home"><a class="nav-a" href="projects.html"><p class="nav-text">Projects</p></a></li>
-                    <li class="nav-opts" data-toggle="tooltip" data-placement="bottom" title="Last update: Sept. 2024"><a class="nav-a" href="resources/Samar Dikshit Resume.pdf" target="_blank" ><p class="nav-text">Resume</p></a></li>
-                    <li class="nav-opts"><a class="nav-a" href="photography.html"><p class="nav-text">Photography</p></a></li>
-                    <li id="nav-icons">
-                        <a class="nav-icons-a" href="https://www.linkedin.com/in/samar-dikshit/" target="_blank"><img src="resources/linkedin.png" class="header-img" alt="LinkedIn"></a>
-                        <a class="nav-icons-a" href="mailto:samard05@gmail.com?cc=dikshit.s@northeastern.edu&subject=[From website] "><img src="resources/gmail2.png" class="header-img" alt="Email me"></a>
-                        <a class="nav-icons-a" href="https://github.com/samar14641" target="_blank"><img src="resources/github.png" class="header-img" alt="GitHub"></a>
-                        <a class="nav-icons-a" href="https://www.instagram.com/samar14641/" target="_blank"><img src="resources/insta.png" class="header-img" alt="Instagram"></a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <div id="main-content">
-            <h2 class="text-header">Projects</h2>
-            <div id="proj-div">
-                <div class="proj-content">
-                    <p>
-                        <b>Comparing Quantitative Linguistics of a Corpus with Vocabulary Networks</b>
-                        <br><small>November 2021 - December 2021</small>
-                        <ul>
-                            <li>Goal: To compare and correlate emperical results of quantitative linguistic measures with metrics of the corpus as a vocabulary network</li>
-                            <li>Languages and networks both have structure and patterns, and follow power laws</li>
-                            <li>I fit Heaps', Zipf's, and the brevity law on the corpus, and created 200-dimension skip-grams of each word</li>
-                            <li>I then created a weighted, directed network using words in the vocabulary with edges based on co-occurrence, and found a relationship between term frequency and degree</li>
-                            <li>The network was also used as a language model</li>
-                            <li>Read the <a class="p-a" href="resources/Comparing Quantiative Linguistics with Vocabulary Networks.pdf" target="_blank">report</a></li>
-                            <li><a class="p-a" href="https://github.com/samar14641/ql-vocab-nets" target="_blank">GitHub</a></li>
-                        </ul>
-                    </p>
-                </div>
-                <div class="proj-content">
-                    <p>
-                        <b>COVID-19 in US Counties: A Network Analysis</b>
-                        <br><small>Work done along with <a class="p-a" href="https://www.khoury.northeastern.edu/people/rithika-lakshminarayanan/" target="_blank">Rithika Lakshminarayanan</a></small>
-                        <br><small>September 2021 - December 2021</small>
-                        <ul>
-                            <li>Goal: To analyse how COVID-19 spread over time at a county level</li>
-                            <li>We created a correlation network using data from Feb'20 to Oct'21:</li>
-                                <ul>
-                                    <li>Nodes: Counties (929 nodes)</li>
-                                    <li>Edges: An edge exists between a pair of nodes if the correlation coefficient of the number of new cases is greater than 0.75 (5,566 edges)</li>
-                                    <li>Edge weight: Correlation coefficient value</li>
-                                    <li>Degree exponent: 4.05</li>
-                                </ul>
-                            <li>Using greedy modularity maximisation and 5-cliques, we were able to detect communites that correspond to geographical regions, and communites where nodes have geographical proximity</li>
-                            <li>View the <a class="p-a" href="resources/COVID-19 in US Counties.pdf" target="_blank">presentation</a></li>
-                            <li><a class="p-a" href="https://github.com/samar14641/covid-us-networks" target="_blank">GitHub</a></li>
-                        </ul>
-                    </p>
-                </div>
-                <div class="proj-content">
-                    <p>
-                        <b>Bitcoin: Creating an Aggregate Growth Metric and Price Prediction</b>
-                        <br><small>July 2021</small>
-                        <ul>
-                            <li>Goal: To create an aggreate growth metric for Bitcoin, and develop a BTC price prediction model</li>
-                            <li>I started out with an exploratory analysis of available Bitcoin metrics, such as difficulty, hash rate, and transaction count to determine the best features to select for the growth and price models</li>
-                            <li>Using hash rate, I implemented a hash ribbon as a single-attribute growth metric for Bitcoin</li>
-                            <li>I created a BTC price prediction model using an SVR:
-                                <ul>
-                                    <li>Kernel: Polynomial</li>
-                                    <li>Cross-validation: 10-fold, 3-repeat</li>
-                                    <li>Mean test R<sup>2</sup>: 0.8377</li>
-                                </ul>
-                            </li>
-                            <li><a class="p-a" href="https://github.com/samar14641/btc-agg-growth" target="_blank">GitHub</a></li>
-                        </ul>
-                    </p>
-                </div>
-                <div class="proj-content">
-                    <p>
-                        <b>COVID-19 Visualisations</b>
-                        <br><small>April 2021</small>
-                        <ul>
-                            <li>Goal: To track statistics related to COVID-19 in certain regions and create accessible visualisations</li>
-                            <li>Starting with data for Massachusetts, I created a skeleton code to create visualisations of data obtained from <a class="p-a" href="https://www.mass.gov/info-details/covid-19-response-reporting#covid-19-daily-dashboard-" target="_blank">Mass.gov</a></li>
-                            <li>Accessible colour palettes were created using a tool available on <a class="p-a" href="https://davidmathlogic.com/colorblind" target="_blank">David Nichols' website</a> for people with protanopia, deuteranopia, and tritanopia</li>
-                            <li><a class="p-a" href="https://nbviewer.jupyter.org/github/samar14641/covid-visualisations/blob/master/massachusettsPlots.ipynb" target="_blank">MA graphs</a></li>
-                            <li><a class="p-a" href="https://github.com/samar14641/covid-visualisations" target="_blank">GitHub</a></li>
-                        </ul>
-                    </p>
-                </div>
-                <div class="proj-content">
-                    <p>
-                        <b>Detecting Brain Tumours using Machine Learning</b>
-                        <br><small>Work done along with Jerry Adams Franklin</small>
-                        <br><small>October 2020 - December 2020</small>
-                        <ul>
-                            <li>Goal: To develop a set of classifiers that can decrease the time taken to detect a brain tumour when given an MRI scan</li>
-                            <li>Early diagnosis has been linked with higher chances of survival</li>
-                            <li>Models implemented: Logistic regression, SVMs (RBF, sigmoid, linear), decision trees, Naive Bayes, Adaptive Boosting, convolutional neural net</li>
-                            <li>Best model: Adaptive Boosting classifier
-                                <ul>
-                                    <li>Sensitivity: 98.2689%</li>
-                                    <li>Accuracy: 99.1671%</li>
-                                    <li>200 estimators of depth 6</li>
-                                </ul>
-                            </li>
-                            <li><a class="p-a" href="https://github.com/samar14641/brain-tumour-detection/blob/main/Results.pdf" target="_blank">Full results</a></li>
-                            <li>Read the <a class="p-a" href="resources/Detecting Brain Tumours using Machine Learning.pdf" target="_blank">report</a></li>
-                            <li><a class="p-a" href="https://github.com/samar14641/brain-tumour-detection" target="_blank">GitHub</a></li>
-                        </ul>
-                    </p>
-                </div>
-                <div class="proj-content">
-                    <p>
-                        <b>The Application of Data Mining for Food Recommendation</b>
-                        <br><small>Work done along with Akshit Jain and Kartheek Karnati</small>
-                        <br><small>July 2020 - August 2020</small>
-                        <ul>
-                            <li>Goal: To answer the questions <em>"what do we cook?"</em> and <em>"what ingredients do we need to make it?"</em></li>
-                            <li>After preprocessing (generalising ingredients, removing/replacing Unicode characters, removing duplicates), we performed some exploratory data analysis to summarise the data</li>
-                            <li>By transforming each recipe into a chain of ingredients, we created a graph for network analysis to determine commonly co-occurring pairs of items</li>
-                            <li>We used the apriori algorithm to mine association rules for items that occur frequently individually, but do not occur together as much as expected</li>
-                            <li>Using Doc2Vec and one-hot encoding, we created two models to recommend recipes based on the similarity of what the user wants</li>
-                            <li>View the <a class="p-a" href="resources/Application of Data Mining for Food Recommendation PPT.pdf" target="_blank">presentation</a></li>
-                            <li><a class="p-a" href="https://github.com/samar14641/food-recomm" target="_blank">GitHub</a></li>
-                        </ul>
-                    </p>
-                </div>
-                <div class="proj-content">
-                    <p>
-                        <b>Training an Algorithm to Predict a Ranked List</b>
-                        <br><small>April 2020</small>
-                        <ul>
-                            <li>Goal: Use machine learning to create a ranked list of documents that would normally be generated by different retrieval models such as BM25 and tf-idf</li>
-                            <li>Implemented for 25 queries (unmodified) on the AP89 corpus</li>
-                            <li>Training data was generated from my own implementation of these retrieval models, where BM25 had the highest average precision of 0.2165</li>
-                            <li>Each query had 1000 non-relevant documents in the data set, along with all documents marked relevant by the qrels file</li>
-                            <li>Models used: linear regression, and an SVR with an RBF kernel</li>
-                            <li>Averge precision of the results: 0.2575 (SVR), 0.2323 (linear regression)</li>
-                            <li><a class="p-a" href="https://github.com/samar14641/ir_ranking-machine_learning" target="_blank">GitHub</a></li>
-                        </ul>
-                    </p>
-                </div>
-                <div class="proj-content">
-                    <p>
-                        <b>r/Coronavirus Analysis</b>
-                        <br><small>March 2020</small>
-                        <ul>
-                            <li>Data collection and text analysis project of the top threads in <a class="p-a" href="https://www.reddit.com/r/Coronavirus/" target="_blank">r/Coronavirus</a> as of March 2020</li>
-                            <li>View analysis results <a class="p-a" href="resources/Analysis on COVID-19 Reddit Threads.pdf" target="_blank">here</a></li>
-                            <li><a class="p-a" href="https://github.com/samar14641/reddit-covid" target="_blank">GitHub</a></li>
-                        </ul>
-                    </p>
-                </div>
-                <div class="proj-content">
-                    <p>
-                        <b>World War II Information Retrieval and Evaluation</b>
-                        <br><small>Webscraping and indexing done along with <a class="p-a" href="https://www.khoury.northeastern.edu/people/rithika-lakshminarayanan/" target="_blank">Rithika Lakshminarayanan</a> and Celia Sherry</small>
-                        <br><small>February 2020 - April 2020</small>
-                        <ul>
-                            <li>Webscraping and indexing: We each scraped around 40,000 articles from 5 unique seed URLs, processed and cleaned them using NLTK, and created an index of unique documents on Elasticsearch (~ 92,000 documents)</li>
-                            <li><a class="p-a" href="https://github.com/samar14641/webgraph-computation" target="_blank">PageRank and HITS</a> were then used to rate the relevance of the pages</li>
-                            <li>A <a class="p-a" href="https://github.com/samar14641/trec_eval" target="_blank">trec eval</a> script was written to calculate IR metrics such as precision, recall, and DCG</li>
-                        </ul>
-                    </p>
-                </div>
-                <div class="proj-content">
-                    <p>
-                        <b>Assessing Similarities and Differences between News Sources in the United States</b>
-                        <br><small>Work done along with Devanshi Deswal, Connor Higgins, Kartheek Karnati, and Oliver Spohngellert</small>
-                        <br><small>October 2019 - November 2019</small>
-                        <ul>
-                            <li>Goal: To compare how different news organisations report political events, and determine any bias that may exist</li>
-                            <li>We scraped around 72,000 articles from 8 different news sites from Aug'19 to Nov'19 to analyse how various political events are reported on by sources on different sides of the political spectrum (left, centre, and right)</li>
-                            <li>Using bigrams, word associations, and sentiment analysis, we were able to visualise and prove the existence of media bias depending on political lean of the organisation</li>
-                            <li>We developed Fasttext and SVM models with a peak sensitivity and specificity of 92.86% and 92.54% to classify articles by political lean based on their headlines</li>
-                            <li>Read the <a class="p-a" href="resources/Media Bias Report.pdf" target="_blank">report</a> or view the <a class="p-a" href="resources/Media Bias PPT.pdf" target="_blank">presentation</a></li>
-                            <li><a class="p-a" href="https://github.com/samar14641/media-bias-project" target="_blank">GitHub</a></li>
-                        </ul>
-                    </p>
-                </div>
-                <!-- <div class="proj-content">
-                    <p>
-                        <b>Dummy Project Div</b>
-                    </p>
-                </div> -->
-            </div>
-        </div>
-    </body>
+   <head>
+       <meta charset="utf-8">
+       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+       <title>Samar Dikshit</title>
+       <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+       <link href="favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+       <link href="favicon/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+       <link href="favicon/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+       <link href="favicon/site.webmanifest" rel="manifest">
+       <link href="css/main.css" rel="stylesheet">
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   </head>
+   <body>
+       <div>
+           <nav>
+               <ul id="navbar">
+                   <li class="nav-opts"><a class="nav-a" href="index.html"><span class="nav-text">Samar Dikshit</span></a></li>
+                   <li class="nav-opts"><a class="nav-a" href="exp.html"><span class="nav-text">Experience and Academics</span></a></li>
+                   <li class="nav-opts" id="nav-opts-home"><a class="nav-a" href="projects.html"><span class="nav-text">Projects</span></a></li>
+                   <li class="nav-opts" data-toggle="tooltip" data-placement="bottom" title="Last update: Sept. 2024"><a class="nav-a" href="resources/pdfs/Samar Dikshit Resume.pdf" target="_blank" ><span class="nav-text">Resume</span></a></li>
+                   <li class="nav-opts"><a class="nav-a" href="photography.html"><span class="nav-text">Photography</span></a></li>
+                   <li id="nav-icons">
+                       <a class="nav-icons-a" href="https://www.linkedin.com/in/samar-dikshit/" target="_blank"><img src="resources/logos_png/linkedin.png" class="header-img" alt="LinkedIn"></a>
+                       <a class="nav-icons-a" href="mailto:samard05@gmail.com?cc=dikshit.s@northeastern.edu&subject=[From website] "><img src="resources/logos_png/gmail2.png" class="header-img" alt="Email me"></a>
+                       <a class="nav-icons-a" href="https://github.com/samar14641" target="_blank"><img src="resources/logos_png/github.png" class="header-img" alt="GitHub"></a>
+                       <a class="nav-icons-a" href="https://www.instagram.com/samar14641/" target="_blank"><img src="resources/logos_png/insta.png" class="header-img" alt="Instagram"></a>
+                   </li>
+               </ul>
+           </nav>
+       </div>
+       <div id="main-content">
+           <div id="empty-div"></div>
+           <h2 class="text-header">Projects</h2>
+           <div id="proj-div">
+               <div class="proj-content">
+                   <p>
+                       <b>Comparing Quantitative Linguistics of a Corpus with Vocabulary Networks</b>
+                       <br><small>November 2021 - December 2021</small>
+                       <ul>
+                           <li>Goal: To compare and correlate emperical results of quantitative linguistic measures with metrics of the corpus as a vocabulary network</li>
+                           <li>Languages and networks both have structure and patterns, and follow power laws</li>
+                           <li>I fit Heaps', Zipf's, and the brevity law on the corpus, and created 200-dimension skip-grams of each word</li>
+                           <li>I then created a weighted, directed network using words in the vocabulary with edges based on co-occurrence, and found a relationship between term frequency and degree</li>
+                           <li>The network was also used as a language model</li>
+                           <li>Read the <a class="p-a" href="resources/pdfs/Comparing Quantiative Linguistics with Vocabulary Networks.pdf" target="_blank">report</a></li>
+                           <li><a class="p-a" href="https://github.com/samar14641/ql-vocab-nets" target="_blank">GitHub</a></li>
+                       </ul>
+                   </p>
+               </div>
+               <div class="proj-content">
+                   <p>
+                       <b>COVID-19 in US Counties: A Network Analysis</b>
+                       <br><small>Work done along with <a class="p-a" href="https://www.khoury.northeastern.edu/people/rithika-lakshminarayanan/" target="_blank">Rithika Lakshminarayanan</a></small>
+                       <br><small>September 2021 - December 2021</small>
+                       <ul>
+                           <li>Goal: To analyse how COVID-19 spread over time at a county level</li>
+                           <li>We created a correlation network using data from Feb'20 to Oct'21:
+                               <ul>
+                                   <li>Nodes: Counties (929 nodes)</li>
+                                   <li>Edges: An edge exists between a pair of nodes if the correlation coefficient of the number of new cases is greater than 0.75 (5,566 edges)</li>
+                                   <li>Edge weight: Correlation coefficient value</li>
+                                   <li>Degree exponent: 4.05</li>
+                               </ul>
+                           </li>
+                           <li>Using greedy modularity maximisation and 5-cliques, we were able to detect communites that correspond to geographical regions, and communites where nodes have geographical proximity</li>
+                           <li>View the <a class="p-a" href="resources/pdfs/COVID-19 in US Counties.pdf" target="_blank">presentation</a></li>
+                           <li><a class="p-a" href="https://github.com/samar14641/covid-us-networks" target="_blank">GitHub</a></li>
+                       </ul>
+                   </p>
+               </div>
+               <div class="proj-content">
+                   <p>
+                       <b>Bitcoin: Creating an Aggregate Growth Metric and Price Prediction</b>
+                       <br><small>July 2021</small>
+                       <ul>
+                           <li>Goal: To create an aggreate growth metric for Bitcoin, and develop a BTC price prediction model</li>
+                           <li>I started out with an exploratory analysis of available Bitcoin metrics, such as difficulty, hash rate, and transaction count to determine the best features to select for the growth and price models</li>
+                           <li>Using hash rate, I implemented a hash ribbon as a single-attribute growth metric for Bitcoin</li>
+                           <li>I created a BTC price prediction model using an SVR:
+                               <ul>
+                                   <li>Kernel: Polynomial</li>
+                                   <li>Cross-validation: 10-fold, 3-repeat</li>
+                                   <li>Mean test R<sup>2</sup>: 0.8377</li>
+                               </ul>
+                           </li>
+                           <li><a class="p-a" href="https://github.com/samar14641/btc-agg-growth" target="_blank">GitHub</a></li>
+                       </ul>
+                   </p>
+               </div>
+               <div class="proj-content">
+                   <p>
+                       <b>COVID-19 Visualisations</b>
+                       <br><small>April 2021</small>
+                       <ul>
+                           <li>Goal: To track statistics related to COVID-19 in certain regions and create accessible visualisations</li>
+                           <li>Starting with data for Massachusetts, I created a skeleton code to create visualisations of data obtained from <a class="p-a" href="https://www.mass.gov/info-details/covid-19-response-reporting#covid-19-daily-dashboard-" target="_blank">Mass.gov</a></li>
+                           <li>Accessible colour palettes were created using a tool available on <a class="p-a" href="https://davidmathlogic.com/colorblind" target="_blank">David Nichols' website</a> for people with protanopia, deuteranopia, and tritanopia</li>
+                           <li><a class="p-a" href="https://nbviewer.jupyter.org/github/samar14641/covid-visualisations/blob/master/massachusettsPlots.ipynb" target="_blank">MA graphs</a></li>
+                           <li><a class="p-a" href="https://github.com/samar14641/covid-visualisations" target="_blank">GitHub</a></li>
+                       </ul>
+                   </p>
+               </div>
+               <div class="proj-content">
+                   <p>
+                       <b>Detecting Brain Tumours using Machine Learning</b>
+                       <br><small>Work done along with Jerry Adams Franklin</small>
+                       <br><small>October 2020 - December 2020</small>
+                       <ul>
+                           <li>Goal: To develop a set of classifiers that can decrease the time taken to detect a brain tumour when given an MRI scan</li>
+                           <li>Early diagnosis has been linked with higher chances of survival</li>
+                           <li>Models implemented: Logistic regression, SVMs (RBF, sigmoid, linear), decision trees, Naive Bayes, Adaptive Boosting, convolutional neural net</li>
+                           <li>Best model: Adaptive Boosting classifier
+                               <ul>
+                                   <li>Sensitivity: 98.2689%</li>
+                                   <li>Accuracy: 99.1671%</li>
+                                   <li>200 estimators of depth 6</li>
+                               </ul>
+                           </li>
+                           <li><a class="p-a" href="https://github.com/samar14641/brain-tumour-detection/blob/main/Results.pdf" target="_blank">Full results</a></li>
+                           <li>Read the <a class="p-a" href="resources/pdfs/Detecting Brain Tumours using Machine Learning.pdf" target="_blank">report</a></li>
+                           <li><a class="p-a" href="https://github.com/samar14641/brain-tumour-detection" target="_blank">GitHub</a></li>
+                       </ul>
+                   </p>
+               </div>
+               <div class="proj-content">
+                   <p>
+                       <b>The Application of Data Mining for Food Recommendation</b>
+                       <br><small>Work done along with Akshit Jain and Kartheek Karnati</small>
+                       <br><small>July 2020 - August 2020</small>
+                       <ul>
+                           <li>Goal: To answer the questions <em>"what do we cook?"</em> and <em>"what ingredients do we need to make it?"</em></li>
+                           <li>After preprocessing (generalising ingredients, removing/replacing Unicode characters, removing duplicates), we performed some exploratory data analysis to summarise the data</li>
+                           <li>By transforming each recipe into a chain of ingredients, we created a graph for network analysis to determine commonly co-occurring pairs of items</li>
+                           <li>We used the apriori algorithm to mine association rules for items that occur frequently individually, but do not occur together as much as expected</li>
+                           <li>Using Doc2Vec and one-hot encoding, we created two models to recommend recipes based on the similarity of what the user wants</li>
+                           <li>View the <a class="p-a" href="resources/pdfs/Application of Data Mining for Food Recommendation PPT.pdf" target="_blank">presentation</a></li>
+                           <li><a class="p-a" href="https://github.com/samar14641/food-recomm" target="_blank">GitHub</a></li>
+                       </ul>
+                   </p>
+               </div>
+               <div class="proj-content">
+                   <p>
+                       <b>Training an Algorithm to Predict a Ranked List</b>
+                       <br><small>April 2020</small>
+                       <ul>
+                           <li>Goal: Use machine learning to create a ranked list of documents that would normally be generated by different retrieval models such as BM25 and tf-idf</li>
+                           <li>Implemented for 25 queries (unmodified) on the AP89 corpus</li>
+                           <li>Training data was generated from my own implementation of these retrieval models, where BM25 had the highest average precision of 0.2165</li>
+                           <li>Each query had 1000 non-relevant documents in the data set, along with all documents marked relevant by the qrels file</li>
+                           <li>Models used: linear regression, and an SVR with an RBF kernel</li>
+                           <li>Averge precision of the results: 0.2575 (SVR), 0.2323 (linear regression)</li>
+                           <li><a class="p-a" href="https://github.com/samar14641/ir_ranking-machine_learning" target="_blank">GitHub</a></li>
+                       </ul>
+                   </p>
+               </div>
+               <div class="proj-content">
+                   <p>
+                       <b>r/Coronavirus Analysis</b>
+                       <br><small>March 2020</small>
+                       <ul>
+                           <li>Data collection and text analysis project of the top threads in <a class="p-a" href="https://www.reddit.com/r/Coronavirus/" target="_blank">r/Coronavirus</a> as of March 2020</li>
+                           <li>View analysis results <a class="p-a" href="resources/pdfs/Analysis on COVID-19 Reddit Threads.pdf" target="_blank">here</a></li>
+                           <li><a class="p-a" href="https://github.com/samar14641/reddit-covid" target="_blank">GitHub</a></li>
+                       </ul>
+                   </p>
+               </div>
+               <div class="proj-content">
+                   <p>
+                       <b>World War II Information Retrieval and Evaluation</b>
+                       <br><small>Webscraping and indexing done along with <a class="p-a" href="https://www.khoury.northeastern.edu/people/rithika-lakshminarayanan/" target="_blank">Rithika Lakshminarayanan</a> and Celia Sherry</small>
+                       <br><small>February 2020 - April 2020</small>
+                       <ul>
+                           <li>Webscraping and indexing: We each scraped around 40,000 articles from 5 unique seed URLs, processed and cleaned them using NLTK, and created an index of unique documents on Elasticsearch (~ 92,000 documents)</li>
+                           <li><a class="p-a" href="https://github.com/samar14641/webgraph-computation" target="_blank">PageRank and HITS</a> were then used to rate the relevance of the pages</li>
+                           <li>A <a class="p-a" href="https://github.com/samar14641/trec_eval" target="_blank">trec eval</a> script was written to calculate IR metrics such as precision, recall, and DCG</li>
+                       </ul>
+                   </p>
+               </div>
+               <div class="proj-content">
+                   <p>
+                       <b>Assessing Similarities and Differences between News Sources in the United States</b>
+                       <br><small>Work done along with Devanshi Deswal, Connor Higgins, Kartheek Karnati, and Oliver Spohngellert</small>
+                       <br><small>October 2019 - November 2019</small>
+                       <ul>
+                           <li>Goal: To compare how different news organisations report political events, and determine any bias that may exist</li>
+                           <li>We scraped around 72,000 articles from 8 different news sites from Aug'19 to Nov'19 to analyse how various political events are reported on by sources on different sides of the political spectrum (left, centre, and right)</li>
+                           <li>Using bigrams, word associations, and sentiment analysis, we were able to visualise and prove the existence of media bias depending on political lean of the organisation</li>
+                           <li>We developed Fasttext and SVM models with a peak sensitivity and specificity of 92.86% and 92.54% to classify articles by political lean based on their headlines</li>
+                           <li>Read the <a class="p-a" href="resources/pdfs/Media Bias Report.pdf" target="_blank">report</a> or view the <a class="p-a" href="resources/pdfs/Media Bias PPT.pdf" target="_blank">presentation</a></li>
+                           <li><a class="p-a" href="https://github.com/samar14641/media-bias-project" target="_blank">GitHub</a></li>
+                       </ul>
+                   </p>
+               </div>
+           </div>
+       </div>
+   </body>
 </html>
