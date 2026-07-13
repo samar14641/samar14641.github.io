@@ -4,6 +4,11 @@
 
 body {
     margin: 0;
+    /* --nav-height (and this padding-top) only update once the mobile
+       nav's own open/close animation finishes (see js/main.js), so this
+       needs its own transition or the content reflow would snap instead
+       of easing in step with the nav. */
+    transition: padding-top 0.25s ease;
 }
 
 p {
@@ -76,6 +81,35 @@ p {
     font-family: 'Roboto', sans-serif;
     height: 30px;
     margin-right: 5px;
+}
+
+/* Hamburger toggle: hidden until the horizontal nav no longer fits
+   on one row (see the "nav collapse" media query below) and the
+   item list collapses into a dropdown instead. */
+
+.nav-toggle {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1100;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 52px;
+    height: 48.6px;
+    padding: 0;
+    background-color: #f5f2f2;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #000000;
 }
 
 /* Bio section (index.html) */
@@ -204,13 +238,30 @@ p {
 }
 
 /* ---------------------------------------------------------------
-   Mobile: the float/fixed-width layout above overflows and clips
-   on narrow screens, so collapse it to a single stacked column.
+   Nav collapse: below this width the floated nav items no longer
+   fit on one row (they'd otherwise float-wrap or, previously, get
+   stacked full-width and eat half the screen). Swap to a hamburger
+   toggle that reveals the list as a dropdown instead.
    --------------------------------------------------------------- */
 
-@media (max-width: 640px) {
+@media (max-width: 800px) {
+    .nav-toggle {
+        display: flex;
+    }
+
+    /* Dock the dropdown below the toggle's own row (instead of both
+       starting at top:0) so the always-visible toggle button never
+       overlaps/intercepts taps on the first item of the open list. */
     #navbar {
-        overflow: visible;
+        top: 48.6px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.25s ease;
+    }
+
+    #navbar.nav-open {
+        max-height: 640px;
+        overflow-y: auto;
     }
 
     .nav-opts,
@@ -219,7 +270,14 @@ p {
         width: 100%;
         text-align: center;
     }
+}
 
+/* ---------------------------------------------------------------
+   Mobile: the float/fixed-width layout above overflows and clips
+   on narrow screens, so collapse it to a single stacked column.
+   --------------------------------------------------------------- */
+
+@media (max-width: 640px) {
     #bio-div {
         width: 92%;
     }

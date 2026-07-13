@@ -18,6 +18,9 @@
     <body>
         <div>
             <nav>
+                <button type="button" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navbar">
+                    <span></span><span></span><span></span>
+                </button>
                 <ul id="navbar">
                     <li class="nav-opts"><a class="nav-a" href="index.html"><span class="nav-text">Samar Dikshit</span></a></li>
                     <li class="nav-opts"><a class="nav-a" href="exp.html"><span class="nav-text">Experience and Academics</span></a></li>
@@ -87,6 +90,12 @@
                 <div class="photo-item ratio-3-2" data-tags="Digital, Urban"><img src="resources/pics_jpg/c17ai19.jpg" alt="C-17"></div>
                 <!-- <div class="photo-item ratio-1-1"><span>Photo 9</span></div> -->
                 <!-- <div class="photo-item ratio-1-1"><span>Photo 10</span></div> -->
+            </div>
+
+            <div class="lightbox" id="lightbox" hidden>
+                <button type="button" class="lightbox-close" aria-label="Close">&times;</button>
+                <img class="lightbox-img" id="lightbox-img" src="" alt="">
+                <p class="lightbox-caption" id="lightbox-caption"></p>
             </div>
         </div>
         <script src="js/main.js"></script>
