@@ -140,20 +140,26 @@ function initTagFilters() {
         });
     });
 
-    var activeTags = allTags.slice();
+    // Selected tags start EMPTY, and an empty selection means "no filter,
+    // show everything" rather than "nothing matches". That makes isolating
+    // a single tag one click (click it) instead of clicking every other
+    // tag off first, while clicking more tags still adds them to the
+    // filter (multi-select), and clicking a selected tag off - or All -
+    // clears back to the unfiltered state.
+    var selectedTags = [];
     var tagButtons = [];
 
     function applyFilter() {
         items.forEach(function (item) {
-            var visible = tagsOf(item).some(function (tag) {
-                return activeTags.indexOf(tag) !== -1;
+            var visible = selectedTags.length === 0 || tagsOf(item).some(function (tag) {
+                return selectedTags.indexOf(tag) !== -1;
             });
             item.style.display = visible ? '' : 'none';
         });
 
-        var allActive = activeTags.length === allTags.length;
-        allBtn.classList.toggle('active', allActive);
-        allBtn.setAttribute('aria-pressed', allActive ? 'true' : 'false');
+        var noneSelected = selectedTags.length === 0;
+        allBtn.classList.toggle('active', noneSelected);
+        allBtn.setAttribute('aria-pressed', noneSelected ? 'true' : 'false');
     }
 
     var allBtn = document.createElement('button');
@@ -163,12 +169,11 @@ function initTagFilters() {
     allBtn.setAttribute('aria-pressed', 'true');
 
     allBtn.addEventListener('click', function () {
-        var turningOn = activeTags.length !== allTags.length;
-        activeTags = turningOn ? allTags.slice() : [];
+        selectedTags = [];
 
         tagButtons.forEach(function (btn) {
-            btn.classList.toggle('active', turningOn);
-            btn.setAttribute('aria-pressed', turningOn ? 'true' : 'false');
+            btn.classList.remove('active');
+            btn.setAttribute('aria-pressed', 'false');
         });
 
         applyFilter();
@@ -179,22 +184,22 @@ function initTagFilters() {
     allTags.forEach(function (tag) {
         var btn = document.createElement('button');
         btn.type = 'button';
-        btn.className = 'tag-btn active';
+        btn.className = 'tag-btn';
         btn.textContent = tag;
-        btn.setAttribute('aria-pressed', 'true');
+        btn.setAttribute('aria-pressed', 'false');
 
         btn.addEventListener('click', function () {
-            var index = activeTags.indexOf(tag);
-            var isActive = index === -1;
+            var index = selectedTags.indexOf(tag);
+            var isSelected = index === -1;
 
-            if (isActive) {
-                activeTags.push(tag);
+            if (isSelected) {
+                selectedTags.push(tag);
             } else {
-                activeTags.splice(index, 1);
+                selectedTags.splice(index, 1);
             }
 
-            btn.classList.toggle('active', isActive);
-            btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+            btn.classList.toggle('active', isSelected);
+            btn.setAttribute('aria-pressed', isSelected ? 'true' : 'false');
             applyFilter();
         });
 
